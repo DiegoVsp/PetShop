@@ -70,7 +70,7 @@
             // 
             this.lblSalario.AutoSize = true;
             this.lblSalario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSalario.Location = new System.Drawing.Point(163, 333);
+            this.lblSalario.Location = new System.Drawing.Point(161, 333);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(56, 13);
             this.lblSalario.TabIndex = 65;
@@ -102,14 +102,14 @@
             // 
             // txtCidadeFun
             // 
-            this.txtCidadeFun.Location = new System.Drawing.Point(252, 275);
+            this.txtCidadeFun.Location = new System.Drawing.Point(252, 245);
             this.txtCidadeFun.Name = "txtCidadeFun";
             this.txtCidadeFun.Size = new System.Drawing.Size(171, 20);
             this.txtCidadeFun.TabIndex = 61;
             // 
             // txtNumFun
             // 
-            this.txtNumFun.Location = new System.Drawing.Point(252, 248);
+            this.txtNumFun.Location = new System.Drawing.Point(252, 278);
             this.txtNumFun.Name = "txtNumFun";
             this.txtNumFun.Size = new System.Drawing.Size(171, 20);
             this.txtNumFun.TabIndex = 60;
@@ -163,7 +163,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCidade.Location = new System.Drawing.Point(163, 282);
+            this.lblCidade.Location = new System.Drawing.Point(163, 250);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(50, 13);
             this.lblCidade.TabIndex = 53;
@@ -173,7 +173,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumero.Location = new System.Drawing.Point(162, 255);
+            this.lblNumero.Location = new System.Drawing.Point(161, 285);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(58, 13);
             this.lblNumero.TabIndex = 52;
@@ -193,7 +193,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEndereco.Location = new System.Drawing.Point(161, 224);
+            this.lblEndereco.Location = new System.Drawing.Point(161, 222);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(70, 13);
             this.lblEndereco.TabIndex = 50;
@@ -303,7 +303,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "FUNCIONÁRIOS";
             // 
-            // Funcionario
+            // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -332,7 +332,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Funcionario";
+            this.Name = "frmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
             this.panel3.ResumeLayout(false);

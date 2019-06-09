@@ -38,3 +38,5 @@ F:\pendrive\PATRICIA ZIVIANE AULA\PetShop\PetShop\obj\Debug\PetShop.csproj.CoreC
 F:\pendrive\PATRICIA ZIVIANE AULA\PetShop\PetShop\obj\Debug\PetShop.csproj.CopyComplete
 F:\pendrive\PATRICIA ZIVIANE AULA\PetShop\PetShop\obj\Debug\PetShop.exe
 F:\pendrive\PATRICIA ZIVIANE AULA\PetShop\PetShop\obj\Debug\PetShop.pdb
+C:\Users\diego\Desktop\PetShop\PetShop\bin\Debug\Correios.dll
+C:\Users\diego\Desktop\PetShop\PetShop\bin\Debug\Correios.pdb

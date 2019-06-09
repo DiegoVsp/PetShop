@@ -36,7 +36,6 @@
             this.txtCidadeCliente = new System.Windows.Forms.TextBox();
             this.txtNumCliente = new System.Windows.Forms.TextBox();
             this.txtEndCliente = new System.Windows.Forms.TextBox();
-            this.txtCepCliente = new System.Windows.Forms.TextBox();
             this.txtTelCliente = new System.Windows.Forms.TextBox();
             this.txtCpfCliente = new System.Windows.Forms.TextBox();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCepCliente = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,31 +111,24 @@
             // 
             // txtCidadeCliente
             // 
-            this.txtCidadeCliente.Location = new System.Drawing.Point(249, 275);
+            this.txtCidadeCliente.Location = new System.Drawing.Point(249, 243);
             this.txtCidadeCliente.Name = "txtCidadeCliente";
             this.txtCidadeCliente.Size = new System.Drawing.Size(171, 20);
             this.txtCidadeCliente.TabIndex = 40;
             // 
             // txtNumCliente
             // 
-            this.txtNumCliente.Location = new System.Drawing.Point(249, 248);
+            this.txtNumCliente.Location = new System.Drawing.Point(249, 272);
             this.txtNumCliente.Name = "txtNumCliente";
             this.txtNumCliente.Size = new System.Drawing.Size(171, 20);
             this.txtNumCliente.TabIndex = 39;
             // 
             // txtEndCliente
             // 
-            this.txtEndCliente.Location = new System.Drawing.Point(249, 217);
+            this.txtEndCliente.Location = new System.Drawing.Point(249, 215);
             this.txtEndCliente.Name = "txtEndCliente";
             this.txtEndCliente.Size = new System.Drawing.Size(171, 20);
             this.txtEndCliente.TabIndex = 38;
-            // 
-            // txtCepCliente
-            // 
-            this.txtCepCliente.Location = new System.Drawing.Point(249, 186);
-            this.txtCepCliente.Name = "txtCepCliente";
-            this.txtCepCliente.Size = new System.Drawing.Size(171, 20);
-            this.txtCepCliente.TabIndex = 37;
             // 
             // txtTelCliente
             // 
@@ -189,7 +182,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCidade.Location = new System.Drawing.Point(160, 282);
+            this.lblCidade.Location = new System.Drawing.Point(160, 250);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(50, 13);
             this.lblCidade.TabIndex = 30;
@@ -199,7 +192,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumero.Location = new System.Drawing.Point(159, 255);
+            this.lblNumero.Location = new System.Drawing.Point(159, 279);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(58, 13);
             this.lblNumero.TabIndex = 29;
@@ -219,7 +212,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEndereco.Location = new System.Drawing.Point(158, 224);
+            this.lblEndereco.Location = new System.Drawing.Point(158, 222);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(70, 13);
             this.lblEndereco.TabIndex = 27;
@@ -298,18 +291,26 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "CLIENTE";
             // 
+            // txtCepCliente
+            // 
+            this.txtCepCliente.Location = new System.Drawing.Point(249, 186);
+            this.txtCepCliente.Name = "txtCepCliente";
+            this.txtCepCliente.Size = new System.Drawing.Size(171, 20);
+            this.txtCepCliente.TabIndex = 38;
+            this.txtCepCliente.Leave += new System.EventHandler(this.cep_Leave);
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(449, 373);
+            this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtEmailCliente);
             this.Controls.Add(this.txtCidadeCliente);
             this.Controls.Add(this.txtNumCliente);
             this.Controls.Add(this.txtEndCliente);
-            this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.txtTelCliente);
             this.Controls.Add(this.txtCpfCliente);
             this.Controls.Add(this.txtNomeCliente);
@@ -348,7 +349,6 @@
         private System.Windows.Forms.TextBox txtCidadeCliente;
         private System.Windows.Forms.TextBox txtNumCliente;
         private System.Windows.Forms.TextBox txtEndCliente;
-        private System.Windows.Forms.TextBox txtCepCliente;
         private System.Windows.Forms.TextBox txtTelCliente;
         private System.Windows.Forms.TextBox txtCpfCliente;
         private System.Windows.Forms.TextBox txtNomeCliente;
@@ -366,5 +366,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCepCliente;
     }
 }

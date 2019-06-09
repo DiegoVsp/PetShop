@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PetShop.MODEL;
 using PetShop.BO;
+using Correios;
 
 namespace PetShop
 {
@@ -25,7 +26,7 @@ namespace PetShop
             ClienteBO clienteBO = new ClienteBO();
 
             cliente.Nome = txtNomeCliente.Text;
-            cliente.Cpf=Convert.ToUInt16(txtCpfCliente.Text);
+            cliente.Cpf = Convert.ToInt32(txtCpfCliente.Text);
             cliente.Cep = txtCepCliente.Text;
             cliente.Endereco = txtEndCliente.Text;
             cliente.Cidade = txtCidadeCliente.Text;
@@ -45,6 +46,27 @@ namespace PetShop
             txtTelCliente.Clear();
             txtEmailCliente.Clear();
 
+        }
+
+        private void cep_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCepCliente.Text))
+                MessageBox.Show("O campo de CEP esta vazio", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else
+            {
+                CorreiosApi correiosApi = new CorreiosApi();
+                var retorno = correiosApi.consultaCEP(txtCepCliente.Text);
+
+                if(retorno is null)
+                {
+                    MessageBox.Show("CEP não encontrado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                txtEndCliente.Text = retorno.end;
+                txtCidadeCliente.Text = retorno.cidade;
+                txtCepCliente.Text = retorno.cep;
+                
+            }
         }
     }
 }
