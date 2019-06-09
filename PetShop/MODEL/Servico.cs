@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PetShop.MODEL
+{
+   public class Servico
+    {
+        private int codServico;
+        private string tipo;
+        private string porte;
+        private float valor;
+
+        public int CodServico { get => codServico; set => codServico = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
+        public string Porte { get => porte; set => porte = value; }
+        public float Valor { get => valor; set => valor = value; }
+
+    }
+}
