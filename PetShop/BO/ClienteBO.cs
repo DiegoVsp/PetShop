@@ -18,5 +18,33 @@ namespace PetShop.BO
                 clienteDAO.Insert(cliente);
             }
         }
+        public void Editar(Cliente cliente)
+        {
+            ClienteDAO clienteDAO = new ClienteDAO();
+            if((cliente.Nome != "") && (cliente.Cpf != 0) && (cliente.Telefone != ""))
+            {
+                clienteDAO.Update(cliente);
+
+            }
+        }
+        public void Buscar(Cliente cliente)
+        {
+            ClienteDAO clienteDAO = new ClienteDAO();
+
+            if (cliente.Codigo >=0)
+            {
+                var clienteTemp = clienteDAO.BuscarPorId(cliente.Codigo);
+
+
+                cliente.Nome = clienteTemp.Nome;
+                cliente.Cpf = clienteTemp.Cpf;
+                cliente.Cep = clienteTemp.Cep;
+                cliente.Endereco = clienteTemp.Endereco;
+                cliente.Cidade = clienteTemp.Cidade;
+                cliente.Numero = clienteTemp.Numero;
+                cliente.Telefone = clienteTemp.Telefone;
+                cliente.Email = clienteTemp.Email;
+            }
+        }
     }
 }

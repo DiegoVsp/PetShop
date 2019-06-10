@@ -25,7 +25,7 @@ namespace PetShop.DAO
 
                 comando.Parameters.AddWithValue("@codServ", atendimento.Servico.CodServico);
                 comando.Parameters.AddWithValue("@codPet", atendimento.Pet.CodPet);
-                comando.Parameters.AddWithValue("@codFunc", atendimento.Funcionario.CodFunc);
+               // comando.Parameters.AddWithValue("@codFunc", atendimento.Funcionario.CodFunc);
                 comando.Parameters.AddWithValue("@dataHora", atendimento.DataHora);
                 comando.Parameters.AddWithValue("@situacao", atendimento.Situacao);
 

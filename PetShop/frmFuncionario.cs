@@ -16,5 +16,10 @@ namespace PetShop
         {
             InitializeComponent();
         }
+
+        private void lblFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
