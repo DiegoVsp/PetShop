@@ -25,48 +25,48 @@ namespace PetShop
             Cliente cliente = new Cliente();
             ClienteBO clienteBO = new ClienteBO();
 
-            cliente.Nome = txtNomeCliente.Text;
-            cliente.Cpf = Convert.ToInt32(txtCpfCliente.Text);
-            cliente.Cep = txtCepCliente.Text;
-            cliente.Endereco = txtEndCliente.Text;
-            cliente.Cidade = txtCidadeCliente.Text;
-            cliente.Numero = txtNumCliente.Text;
-            cliente.Telefone = txtTelCliente.Text;
-            cliente.Email = txtEmailCliente.Text;
+            cliente.Nome = txtNome.Text;
+            cliente.Cpf = Convert.ToInt32(txtCpf.Text);
+            cliente.Cep = txtCep.Text;
+            cliente.Endereco = txtEnd.Text;
+            cliente.Cidade = txtCidade.Text;
+            cliente.Numero = txtNum.Text;
+            cliente.Telefone = txtTelefone.Text;
+            cliente.Email = txtEmail.Text;
 
             clienteBO.GravarCliente(cliente);
             MessageBox.Show("Cliente Cadastrado com sucesso!!!");
 
-            txtNomeCliente.Clear();
-            txtCpfCliente.Clear();
-            txtCepCliente.Clear();
-            txtEndCliente.Clear();
-            txtCidadeCliente.Clear();
-            txtNumCliente.Clear();
-            txtTelCliente.Clear();
-            txtEmailCliente.Clear();
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtCep.Clear();
+            txtEnd.Clear();
+            txtCidade.Clear();
+            txtNum.Clear();
+            txtTelefone.Clear();
+            txtEmail.Clear();
 
         }
 
         private void cep_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCepCliente.Text))
+            if (string.IsNullOrEmpty(txtCep.Text))
                 MessageBox.Show("O campo de CEP esta vazio", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
                 try
                 {
                     CorreiosApi correiosApi = new CorreiosApi();
-                    var retorno = correiosApi.consultaCEP(txtCepCliente.Text);
+                    var retorno = correiosApi.consultaCEP(txtCep.Text);
 
                     if (retorno is null)
                     {
                         MessageBox.Show("CEP não encontrado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
                     }
-                    txtEndCliente.Text = retorno.end;
-                    txtCidadeCliente.Text = retorno.cidade;
-                    txtCepCliente.Text = retorno.cep;
+                    txtEnd.Text = retorno.end;
+                    txtCidade.Text = retorno.cidade;
+                    txtCep.Text = retorno.cep;
                 }
                 catch
                 {
@@ -93,28 +93,28 @@ namespace PetShop
             Cliente cliente = new Cliente();
             ClienteBO clienteBO = new ClienteBO();
 
-            cliente.Codigo = Convert.ToInt16(txtCodCliente.Text);
-            cliente.Nome = txtNomeCliente.Text;
-            cliente.Cpf = Convert.ToInt32(txtCpfCliente.Text);
-            cliente.Cep = txtCepCliente.Text;
-            cliente.Endereco = txtEndCliente.Text;
-            cliente.Cidade = txtCidadeCliente.Text;
-            cliente.Numero = txtNumCliente.Text;
-            cliente.Telefone = txtTelCliente.Text;
-            cliente.Email = txtEmailCliente.Text;
+            cliente.Codigo = Convert.ToInt16(txtCod.Text);
+            cliente.Nome = txtNome.Text;
+            cliente.Cpf = Convert.ToInt32(txtCpf.Text);
+            cliente.Cep = txtCep.Text;
+            cliente.Endereco = txtEnd.Text;
+            cliente.Cidade = txtCidade.Text;
+            cliente.Numero = txtNum.Text;
+            cliente.Telefone = txtTelefone.Text;
+            cliente.Email = txtEmail.Text;
 
             clienteBO.Editar(cliente);
             MessageBox.Show("Update Realizado Com sucesso!");
 
-            txtCodCliente.Clear();
-            txtNomeCliente.Clear();
-            txtCpfCliente.Clear();
-            txtCepCliente.Clear();
-            txtEndCliente.Clear();
-            txtCidadeCliente.Clear();
-            txtNumCliente.Clear();
-            txtTelCliente.Clear();
-            txtEmailCliente.Clear();
+            txtCod.Clear();
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtCep.Clear();
+            txtEnd.Clear();
+            txtCidade.Clear();
+            txtNum.Clear();
+            txtTelefone.Clear();
+            txtEmail.Clear();
 
         }
 
@@ -126,38 +126,38 @@ namespace PetShop
 
             try
             {
-                cliente.Codigo = Convert.ToInt16(txtCodCliente.Text);
+                cliente.Codigo = Convert.ToInt16(txtCod.Text);
                 clienteBO.Buscar(cliente);
                 if (cliente.Nome == "")
                 {
                     MessageBox.Show("Cliente não encontrado");
 
-                    txtCodCliente.Clear();
-                    txtNomeCliente.Clear();
-                    txtCpfCliente.Clear();
-                    txtCepCliente.Clear();
-                    txtEndCliente.Clear();
-                    txtCidadeCliente.Clear();
-                    txtNumCliente.Clear();
-                    txtTelCliente.Clear();
-                    txtEmailCliente.Clear();
+                    txtCod.Clear();
+                    txtNome.Clear();
+                    txtCpf.Clear();
+                    txtCep.Clear();
+                    txtEnd.Clear();
+                    txtCidade.Clear();
+                    txtNum.Clear();
+                    txtTelefone.Clear();
+                    txtEmail.Clear();
 
                 }
                 else
                 {
-                    txtNomeCliente.Text = cliente.Nome;
-                    txtCpfCliente.Text = Convert.ToString(cliente.Cpf);
-                    txtCepCliente.Text = cliente.Cep;
-                    txtEndCliente.Text = cliente.Endereco;
-                    txtCidadeCliente.Text = cliente.Cidade;
-                    txtNumCliente.Text = cliente.Numero;
-                    txtTelCliente.Text = cliente.Telefone;
-                    txtEmailCliente.Text = cliente.Email;
+                    txtNome.Text = cliente.Nome;
+                    txtCpf.Text = Convert.ToString(cliente.Cpf);
+                    txtCep.Text = cliente.Cep;
+                    txtEnd.Text = cliente.Endereco;
+                    txtCidade.Text = cliente.Cidade;
+                    txtNum.Text = cliente.Numero;
+                    txtTelefone.Text = cliente.Telefone;
+                    txtEmail.Text = cliente.Email;
                 }
             }
             catch
             {
-                MessageBox.Show("Preencha  corretamente as informações!!");
+                MessageBox.Show("Preencha  corretamente as informações!!", "ATENÇÃO ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

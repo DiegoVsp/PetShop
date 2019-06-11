@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BO\ClienteBO.cs" />
+    <Compile Include="BO\FuncionarioBO.cs" />
     <Compile Include="frmAtendimento.cs">
       <SubType>Form</SubType>
     </Compile>

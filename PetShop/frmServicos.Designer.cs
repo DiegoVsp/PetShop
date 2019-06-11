@@ -55,7 +55,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(122, 318);
+            this.panel3.Size = new System.Drawing.Size(122, 331);
             this.panel3.TabIndex = 25;
             // 
             // btnEditar
@@ -95,7 +95,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 55);
+            this.panel1.Size = new System.Drawing.Size(686, 55);
             this.panel1.TabIndex = 24;
             // 
             // label1
@@ -113,7 +113,7 @@
             // 
             this.txtCodServico.Location = new System.Drawing.Point(242, 69);
             this.txtCodServico.Name = "txtCodServico";
-            this.txtCodServico.Size = new System.Drawing.Size(163, 20);
+            this.txtCodServico.Size = new System.Drawing.Size(48, 20);
             this.txtCodServico.TabIndex = 89;
             // 
             // lblCodPet
@@ -128,7 +128,7 @@
             // 
             // txtPorte
             // 
-            this.txtPorte.Location = new System.Drawing.Point(242, 128);
+            this.txtPorte.Location = new System.Drawing.Point(242, 98);
             this.txtPorte.Name = "txtPorte";
             this.txtPorte.Size = new System.Drawing.Size(163, 20);
             this.txtPorte.TabIndex = 91;
@@ -137,7 +137,7 @@
             // 
             this.lblPorte.AutoSize = true;
             this.lblPorte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPorte.Location = new System.Drawing.Point(153, 131);
+            this.lblPorte.Location = new System.Drawing.Point(153, 101);
             this.lblPorte.Name = "lblPorte";
             this.lblPorte.Size = new System.Drawing.Size(47, 13);
             this.lblPorte.TabIndex = 90;
@@ -145,7 +145,7 @@
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(242, 98);
+            this.txtTipo.Location = new System.Drawing.Point(412, 70);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(163, 20);
             this.txtTipo.TabIndex = 93;
@@ -154,7 +154,7 @@
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTipo.Location = new System.Drawing.Point(153, 101);
+            this.lblTipo.Location = new System.Drawing.Point(357, 76);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(35, 13);
             this.lblTipo.TabIndex = 92;
@@ -162,7 +162,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(242, 159);
+            this.txtValor.Location = new System.Drawing.Point(511, 96);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(163, 20);
             this.txtValor.TabIndex = 95;
@@ -171,18 +171,18 @@
             // 
             this.lblValor.AutoSize = true;
             this.lblValor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblValor.Location = new System.Drawing.Point(153, 166);
+            this.lblValor.Location = new System.Drawing.Point(422, 103);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(46, 13);
             this.lblValor.TabIndex = 94;
             this.lblValor.Text = "VALOR:";
             // 
-            // Servicos
+            // frmServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(449, 373);
+            this.ClientSize = new System.Drawing.Size(686, 386);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.txtTipo);
@@ -194,7 +194,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Servicos";
+            this.Name = "frmServicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servicos";
             this.panel3.ResumeLayout(false);

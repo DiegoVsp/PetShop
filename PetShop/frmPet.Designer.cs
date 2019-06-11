@@ -56,65 +56,65 @@
             // 
             // txtNomeFun
             // 
-            this.txtNomeFun.Location = new System.Drawing.Point(242, 105);
+            this.txtNomeFun.Location = new System.Drawing.Point(427, 72);
             this.txtNomeFun.Name = "txtNomeFun";
             this.txtNomeFun.Size = new System.Drawing.Size(171, 20);
             this.txtNomeFun.TabIndex = 79;
             // 
             // txtCidadeFun
             // 
-            this.txtCidadeFun.Location = new System.Drawing.Point(242, 305);
+            this.txtCidadeFun.Location = new System.Drawing.Point(492, 151);
             this.txtCidadeFun.Name = "txtCidadeFun";
             this.txtCidadeFun.Size = new System.Drawing.Size(171, 20);
             this.txtCidadeFun.TabIndex = 78;
             // 
             // txtNumFun
             // 
-            this.txtNumFun.Location = new System.Drawing.Point(242, 272);
+            this.txtNumFun.Location = new System.Drawing.Point(242, 153);
             this.txtNumFun.Name = "txtNumFun";
-            this.txtNumFun.Size = new System.Drawing.Size(171, 20);
+            this.txtNumFun.Size = new System.Drawing.Size(158, 20);
             this.txtNumFun.TabIndex = 77;
             // 
             // txtEndFun
             // 
-            this.txtEndFun.Location = new System.Drawing.Point(242, 235);
+            this.txtEndFun.Location = new System.Drawing.Point(492, 125);
             this.txtEndFun.Name = "txtEndFun";
             this.txtEndFun.Size = new System.Drawing.Size(171, 20);
             this.txtEndFun.TabIndex = 76;
             // 
             // txtCepFun
             // 
-            this.txtCepFun.Location = new System.Drawing.Point(242, 201);
+            this.txtCepFun.Location = new System.Drawing.Point(242, 127);
             this.txtCepFun.Name = "txtCepFun";
-            this.txtCepFun.Size = new System.Drawing.Size(171, 20);
+            this.txtCepFun.Size = new System.Drawing.Size(158, 20);
             this.txtCepFun.TabIndex = 75;
             // 
             // txtTelefoneFun
             // 
-            this.txtTelefoneFun.Location = new System.Drawing.Point(242, 168);
+            this.txtTelefoneFun.Location = new System.Drawing.Point(492, 99);
             this.txtTelefoneFun.Name = "txtTelefoneFun";
             this.txtTelefoneFun.Size = new System.Drawing.Size(171, 20);
             this.txtTelefoneFun.TabIndex = 74;
             // 
             // txtCpfFun
             // 
-            this.txtCpfFun.Location = new System.Drawing.Point(242, 139);
+            this.txtCpfFun.Location = new System.Drawing.Point(242, 101);
             this.txtCpfFun.Name = "txtCpfFun";
-            this.txtCpfFun.Size = new System.Drawing.Size(171, 20);
+            this.txtCpfFun.Size = new System.Drawing.Size(158, 20);
             this.txtCpfFun.TabIndex = 73;
             // 
             // txtCodFun
             // 
             this.txtCodFun.Location = new System.Drawing.Point(242, 75);
             this.txtCodFun.Name = "txtCodFun";
-            this.txtCodFun.Size = new System.Drawing.Size(100, 20);
+            this.txtCodFun.Size = new System.Drawing.Size(55, 20);
             this.txtCodFun.TabIndex = 72;
             // 
             // lblEspecie
             // 
             this.lblEspecie.AutoSize = true;
             this.lblEspecie.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEspecie.Location = new System.Drawing.Point(160, 312);
+            this.lblEspecie.Location = new System.Drawing.Point(411, 158);
             this.lblEspecie.Name = "lblEspecie";
             this.lblEspecie.Size = new System.Drawing.Size(55, 13);
             this.lblEspecie.TabIndex = 71;
@@ -124,7 +124,7 @@
             // 
             this.lblCor.AutoSize = true;
             this.lblCor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCor.Location = new System.Drawing.Point(161, 279);
+            this.lblCor.Location = new System.Drawing.Point(161, 160);
             this.lblCor.Name = "lblCor";
             this.lblCor.Size = new System.Drawing.Size(33, 13);
             this.lblCor.TabIndex = 70;
@@ -134,7 +134,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSexo.Location = new System.Drawing.Point(161, 242);
+            this.lblSexo.Location = new System.Drawing.Point(411, 132);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(39, 13);
             this.lblSexo.TabIndex = 69;
@@ -144,7 +144,7 @@
             // 
             this.lblPorte.AutoSize = true;
             this.lblPorte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPorte.Location = new System.Drawing.Point(161, 208);
+            this.lblPorte.Location = new System.Drawing.Point(161, 134);
             this.lblPorte.Name = "lblPorte";
             this.lblPorte.Size = new System.Drawing.Size(47, 13);
             this.lblPorte.TabIndex = 68;
@@ -154,7 +154,7 @@
             // 
             this.lblRaca.AutoSize = true;
             this.lblRaca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRaca.Location = new System.Drawing.Point(161, 175);
+            this.lblRaca.Location = new System.Drawing.Point(411, 106);
             this.lblRaca.Name = "lblRaca";
             this.lblRaca.Size = new System.Drawing.Size(39, 13);
             this.lblRaca.TabIndex = 67;
@@ -164,7 +164,7 @@
             // 
             this.lblNomePet.AutoSize = true;
             this.lblNomePet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNomePet.Location = new System.Drawing.Point(158, 146);
+            this.lblNomePet.Location = new System.Drawing.Point(158, 108);
             this.lblNomePet.Name = "lblNomePet";
             this.lblNomePet.Size = new System.Drawing.Size(42, 13);
             this.lblNomePet.TabIndex = 66;
@@ -179,7 +179,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(118, 318);
+            this.panel3.Size = new System.Drawing.Size(118, 331);
             this.panel3.TabIndex = 63;
             // 
             // btnEditar
@@ -219,7 +219,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 55);
+            this.panel1.Size = new System.Drawing.Size(686, 55);
             this.panel1.TabIndex = 62;
             // 
             // label1
@@ -227,7 +227,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Magneto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(167, 19);
+            this.label1.Location = new System.Drawing.Point(296, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 32);
             this.label1.TabIndex = 2;
@@ -237,7 +237,7 @@
             // 
             this.lblCodPet.AutoSize = true;
             this.lblCodPet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodPet.Location = new System.Drawing.Point(158, 112);
+            this.lblCodPet.Location = new System.Drawing.Point(343, 79);
             this.lblCodPet.Name = "lblCodPet";
             this.lblCodPet.Size = new System.Drawing.Size(57, 13);
             this.lblCodPet.TabIndex = 64;
@@ -253,12 +253,12 @@
             this.lblCodCli.TabIndex = 65;
             this.lblCodCli.Text = "CÓDIGO CLI:";
             // 
-            // Pet
+            // frmPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(449, 373);
+            this.ClientSize = new System.Drawing.Size(686, 386);
             this.Controls.Add(this.txtNomeFun);
             this.Controls.Add(this.txtCidadeFun);
             this.Controls.Add(this.txtNumFun);
@@ -278,7 +278,7 @@
             this.Controls.Add(this.lblCodPet);
             this.Controls.Add(this.lblCodCli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Pet";
+            this.Name = "frmPet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pet";
             this.panel3.ResumeLayout(false);

@@ -10,10 +10,10 @@ namespace PetShop.MODEL
     {
         
         private string cartTrab;
-        private float salario;
+        private decimal salario;
 
         public string CartTrab { get => cartTrab; set => cartTrab = value; }
-        public float Salario { get => salario; set => salario = value; }
+        public decimal Salario { get => salario; set => salario = value; }
         
 
     }

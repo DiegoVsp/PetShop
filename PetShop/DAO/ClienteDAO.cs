@@ -101,7 +101,7 @@ namespace PetShop.DAO
             {
                 cliente.Codigo = 0;
                 cliente.Nome = "";
-                
+                cliente.Cpf = 0;
                 cliente.Cep = "";
                 cliente.Endereco = "";
                 cliente.Cidade = "";

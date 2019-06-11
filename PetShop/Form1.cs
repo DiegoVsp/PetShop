@@ -27,5 +27,11 @@ namespace PetShop
         {
             this.Close();
         }
+
+        private void btnFuncionario_Click(object sender, EventArgs e)
+        {
+            frmFuncionario form = new frmFuncionario();
+            form.Show();
+        }
     }
 }

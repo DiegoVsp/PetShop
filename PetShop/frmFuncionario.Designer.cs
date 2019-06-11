@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNomeFun = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblSalario = new System.Windows.Forms.Label();
-            this.txtSalarioFun = new System.Windows.Forms.TextBox();
-            this.txtCartTrabFun = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.txtCartTrab = new System.Windows.Forms.TextBox();
             this.lblCartTrab = new System.Windows.Forms.Label();
-            this.txtCidadeFun = new System.Windows.Forms.TextBox();
-            this.txtNumFun = new System.Windows.Forms.TextBox();
-            this.txtEndFun = new System.Windows.Forms.TextBox();
-            this.txtCepFun = new System.Windows.Forms.TextBox();
-            this.txtTelefoneFun = new System.Windows.Forms.TextBox();
-            this.txtCpfFun = new System.Windows.Forms.TextBox();
-            this.txtCodFun = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.txtEnd = new System.Windows.Forms.TextBox();
+            this.txtCep = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
@@ -54,107 +54,108 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblFechar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtNomeFun
+            // txtNome
             // 
-            this.txtNomeFun.Location = new System.Drawing.Point(252, 95);
-            this.txtNomeFun.Name = "txtNomeFun";
-            this.txtNomeFun.Size = new System.Drawing.Size(171, 20);
-            this.txtNomeFun.TabIndex = 66;
+            this.txtNome.Location = new System.Drawing.Point(252, 95);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(171, 20);
+            this.txtNome.TabIndex = 2;
             // 
             // lblSalario
             // 
             this.lblSalario.AutoSize = true;
             this.lblSalario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSalario.Location = new System.Drawing.Point(161, 333);
+            this.lblSalario.Location = new System.Drawing.Point(447, 275);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(56, 13);
             this.lblSalario.TabIndex = 65;
             this.lblSalario.Text = "SALÁRIO:";
             // 
-            // txtSalarioFun
+            // txtSalario
             // 
-            this.txtSalarioFun.Location = new System.Drawing.Point(252, 330);
-            this.txtSalarioFun.Name = "txtSalarioFun";
-            this.txtSalarioFun.Size = new System.Drawing.Size(171, 20);
-            this.txtSalarioFun.TabIndex = 64;
+            this.txtSalario.Location = new System.Drawing.Point(503, 272);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(171, 20);
+            this.txtSalario.TabIndex = 10;
             // 
-            // txtCartTrabFun
+            // txtCartTrab
             // 
-            this.txtCartTrabFun.Location = new System.Drawing.Point(252, 304);
-            this.txtCartTrabFun.Name = "txtCartTrabFun";
-            this.txtCartTrabFun.Size = new System.Drawing.Size(171, 20);
-            this.txtCartTrabFun.TabIndex = 63;
+            this.txtCartTrab.Location = new System.Drawing.Point(252, 272);
+            this.txtCartTrab.Name = "txtCartTrab";
+            this.txtCartTrab.Size = new System.Drawing.Size(171, 20);
+            this.txtCartTrab.TabIndex = 9;
             // 
             // lblCartTrab
             // 
             this.lblCartTrab.AutoSize = true;
             this.lblCartTrab.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCartTrab.Location = new System.Drawing.Point(161, 311);
+            this.lblCartTrab.Location = new System.Drawing.Point(161, 279);
             this.lblCartTrab.Name = "lblCartTrab";
             this.lblCartTrab.Size = new System.Drawing.Size(96, 13);
             this.lblCartTrab.TabIndex = 62;
             this.lblCartTrab.Text = "CARTEIRA TRAB:";
             // 
-            // txtCidadeFun
+            // txtCidade
             // 
-            this.txtCidadeFun.Location = new System.Drawing.Point(252, 245);
-            this.txtCidadeFun.Name = "txtCidadeFun";
-            this.txtCidadeFun.Size = new System.Drawing.Size(171, 20);
-            this.txtCidadeFun.TabIndex = 61;
+            this.txtCidade.Location = new System.Drawing.Point(503, 196);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(171, 20);
+            this.txtCidade.TabIndex = 7;
             // 
-            // txtNumFun
+            // txtNum
             // 
-            this.txtNumFun.Location = new System.Drawing.Point(252, 278);
-            this.txtNumFun.Name = "txtNumFun";
-            this.txtNumFun.Size = new System.Drawing.Size(171, 20);
-            this.txtNumFun.TabIndex = 60;
+            this.txtNum.Location = new System.Drawing.Point(252, 236);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(171, 20);
+            this.txtNum.TabIndex = 8;
             // 
-            // txtEndFun
+            // txtEnd
             // 
-            this.txtEndFun.Location = new System.Drawing.Point(252, 217);
-            this.txtEndFun.Name = "txtEndFun";
-            this.txtEndFun.Size = new System.Drawing.Size(171, 20);
-            this.txtEndFun.TabIndex = 59;
+            this.txtEnd.Location = new System.Drawing.Point(252, 198);
+            this.txtEnd.Name = "txtEnd";
+            this.txtEnd.Size = new System.Drawing.Size(171, 20);
+            this.txtEnd.TabIndex = 6;
             // 
-            // txtCepFun
+            // txtCep
             // 
-            this.txtCepFun.Location = new System.Drawing.Point(252, 186);
-            this.txtCepFun.Name = "txtCepFun";
-            this.txtCepFun.Size = new System.Drawing.Size(171, 20);
-            this.txtCepFun.TabIndex = 58;
+            this.txtCep.Location = new System.Drawing.Point(254, 161);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(171, 20);
+            this.txtCep.TabIndex = 5;
+            this.txtCep.Leave += new System.EventHandler(this.cep_leave);
             // 
-            // txtTelefoneFun
+            // txtTelefone
             // 
-            this.txtTelefoneFun.Location = new System.Drawing.Point(252, 154);
-            this.txtTelefoneFun.Name = "txtTelefoneFun";
-            this.txtTelefoneFun.Size = new System.Drawing.Size(171, 20);
-            this.txtTelefoneFun.TabIndex = 57;
+            this.txtTelefone.Location = new System.Drawing.Point(252, 127);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(171, 20);
+            this.txtTelefone.TabIndex = 4;
             // 
-            // txtCpfFun
+            // txtCpf
             // 
-            this.txtCpfFun.Location = new System.Drawing.Point(252, 125);
-            this.txtCpfFun.Name = "txtCpfFun";
-            this.txtCpfFun.Size = new System.Drawing.Size(171, 20);
-            this.txtCpfFun.TabIndex = 56;
+            this.txtCpf.Location = new System.Drawing.Point(503, 93);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(117, 20);
+            this.txtCpf.TabIndex = 3;
             // 
-            // txtCodFun
+            // txtCod
             // 
-            this.txtCodFun.Location = new System.Drawing.Point(254, 69);
-            this.txtCodFun.Name = "txtCodFun";
-            this.txtCodFun.Size = new System.Drawing.Size(100, 20);
-            this.txtCodFun.TabIndex = 55;
+            this.txtCod.Location = new System.Drawing.Point(254, 69);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(48, 20);
+            this.txtCod.TabIndex = 1;
             // 
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTelefone.Location = new System.Drawing.Point(161, 161);
+            this.lblTelefone.Location = new System.Drawing.Point(161, 134);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(66, 13);
             this.lblTelefone.TabIndex = 54;
@@ -164,7 +165,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCidade.Location = new System.Drawing.Point(163, 250);
+            this.lblCidade.Location = new System.Drawing.Point(447, 201);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(50, 13);
             this.lblCidade.TabIndex = 53;
@@ -174,7 +175,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumero.Location = new System.Drawing.Point(161, 285);
+            this.lblNumero.Location = new System.Drawing.Point(161, 243);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(58, 13);
             this.lblNumero.TabIndex = 52;
@@ -184,7 +185,7 @@
             // 
             this.lblCep.AutoSize = true;
             this.lblCep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCep.Location = new System.Drawing.Point(161, 193);
+            this.lblCep.Location = new System.Drawing.Point(163, 168);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(31, 13);
             this.lblCep.TabIndex = 51;
@@ -194,7 +195,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEndereco.Location = new System.Drawing.Point(161, 222);
+            this.lblEndereco.Location = new System.Drawing.Point(161, 203);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(70, 13);
             this.lblEndereco.TabIndex = 50;
@@ -204,7 +205,7 @@
             // 
             this.lblCpf.AutoSize = true;
             this.lblCpf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCpf.Location = new System.Drawing.Point(162, 132);
+            this.lblCpf.Location = new System.Drawing.Point(448, 100);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(30, 13);
             this.lblCpf.TabIndex = 49;
@@ -240,13 +241,13 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(139, 318);
+            this.panel3.Size = new System.Drawing.Size(139, 331);
             this.panel3.TabIndex = 46;
             // 
             // btnCalcularSalário
             // 
             this.btnCalcularSalário.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcularSalário.Location = new System.Drawing.Point(10, 98);
+            this.btnCalcularSalário.Location = new System.Drawing.Point(12, 106);
             this.btnCalcularSalário.Name = "btnCalcularSalário";
             this.btnCalcularSalário.Size = new System.Drawing.Size(110, 37);
             this.btnCalcularSalário.TabIndex = 22;
@@ -256,22 +257,24 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(10, 69);
+            this.btnEditar.Location = new System.Drawing.Point(12, 41);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(110, 23);
             this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(10, 40);
+            this.btnBuscar.Location = new System.Drawing.Point(12, 75);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 23);
             this.btnBuscar.TabIndex = 21;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCadastrar
             // 
@@ -282,6 +285,8 @@
             this.btnCadastrar.TabIndex = 19;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCadastrar.Leave += new System.EventHandler(this.cep_leave);
             // 
             // panel1
             // 
@@ -291,48 +296,49 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 55);
+            this.panel1.Size = new System.Drawing.Size(686, 55);
             this.panel1.TabIndex = 45;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Magneto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(73, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "FUNCIONÁRIOS";
             // 
             // lblFechar
             // 
             this.lblFechar.AutoSize = true;
-            this.lblFechar.Location = new System.Drawing.Point(423, 9);
+            this.lblFechar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFechar.Location = new System.Drawing.Point(660, 9);
             this.lblFechar.Name = "lblFechar";
             this.lblFechar.Size = new System.Drawing.Size(14, 13);
             this.lblFechar.TabIndex = 67;
             this.lblFechar.Text = "X";
             this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Magneto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(182, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 32);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "FUNCIONÁRIOS";
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(449, 373);
-            this.Controls.Add(this.txtNomeFun);
+            this.ClientSize = new System.Drawing.Size(686, 386);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblSalario);
-            this.Controls.Add(this.txtSalarioFun);
-            this.Controls.Add(this.txtCartTrabFun);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.txtCartTrab);
             this.Controls.Add(this.lblCartTrab);
-            this.Controls.Add(this.txtCidadeFun);
-            this.Controls.Add(this.txtNumFun);
-            this.Controls.Add(this.txtEndFun);
-            this.Controls.Add(this.txtCepFun);
-            this.Controls.Add(this.txtTelefoneFun);
-            this.Controls.Add(this.txtCpfFun);
-            this.Controls.Add(this.txtCodFun);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.txtNum);
+            this.Controls.Add(this.txtEnd);
+            this.Controls.Add(this.txtCep);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.lblNumero);
@@ -357,18 +363,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNomeFun;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSalario;
-        private System.Windows.Forms.TextBox txtSalarioFun;
-        private System.Windows.Forms.TextBox txtCartTrabFun;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.TextBox txtCartTrab;
         private System.Windows.Forms.Label lblCartTrab;
-        private System.Windows.Forms.TextBox txtCidadeFun;
-        private System.Windows.Forms.TextBox txtNumFun;
-        private System.Windows.Forms.TextBox txtEndFun;
-        private System.Windows.Forms.TextBox txtCepFun;
-        private System.Windows.Forms.TextBox txtTelefoneFun;
-        private System.Windows.Forms.TextBox txtCpfFun;
-        private System.Windows.Forms.TextBox txtCodFun;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.TextBox txtEnd;
+        private System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblCidade;
         private System.Windows.Forms.Label lblNumero;

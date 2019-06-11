@@ -21,7 +21,7 @@ namespace PetShop.BO
         public void Editar(Cliente cliente)
         {
             ClienteDAO clienteDAO = new ClienteDAO();
-            if((cliente.Nome != "") && (cliente.Cpf != 0) && (cliente.Telefone != ""))
+            if(cliente.Nome != "")
             {
                 clienteDAO.Update(cliente);
 
@@ -31,11 +31,11 @@ namespace PetShop.BO
         {
             ClienteDAO clienteDAO = new ClienteDAO();
 
-            if (cliente.Codigo >=0)
+            if (cliente.Codigo >0)
             {
                 var clienteTemp = clienteDAO.BuscarPorId(cliente.Codigo);
 
-
+                
                 cliente.Nome = clienteTemp.Nome;
                 cliente.Cpf = clienteTemp.Cpf;
                 cliente.Cep = clienteTemp.Cep;
