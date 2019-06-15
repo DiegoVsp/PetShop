@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNomeFun = new System.Windows.Forms.TextBox();
-            this.txtCidadeFun = new System.Windows.Forms.TextBox();
-            this.txtNumFun = new System.Windows.Forms.TextBox();
-            this.txtEndFun = new System.Windows.Forms.TextBox();
-            this.txtCepFun = new System.Windows.Forms.TextBox();
-            this.txtTelefoneFun = new System.Windows.Forms.TextBox();
-            this.txtCpfFun = new System.Windows.Forms.TextBox();
-            this.txtCodFun = new System.Windows.Forms.TextBox();
+            this.txtEspecie = new System.Windows.Forms.TextBox();
+            this.txtCor = new System.Windows.Forms.TextBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
+            this.txtPorte = new System.Windows.Forms.TextBox();
+            this.txtRaca = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.lblEspecie = new System.Windows.Forms.Label();
             this.lblCor = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
@@ -50,73 +49,70 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblCodPet = new System.Windows.Forms.Label();
             this.lblCodCli = new System.Windows.Forms.Label();
+            this.txtCodP = new System.Windows.Forms.TextBox();
+            this.grpCadastroPets = new System.Windows.Forms.GroupBox();
+            this.lblFechar = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.grpCadastroPets.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtNomeFun
+            // txtEspecie
             // 
-            this.txtNomeFun.Location = new System.Drawing.Point(427, 72);
-            this.txtNomeFun.Name = "txtNomeFun";
-            this.txtNomeFun.Size = new System.Drawing.Size(171, 20);
-            this.txtNomeFun.TabIndex = 79;
+            this.txtEspecie.Location = new System.Drawing.Point(354, 97);
+            this.txtEspecie.Name = "txtEspecie";
+            this.txtEspecie.Size = new System.Drawing.Size(171, 22);
+            this.txtEspecie.TabIndex = 78;
             // 
-            // txtCidadeFun
+            // txtCor
             // 
-            this.txtCidadeFun.Location = new System.Drawing.Point(492, 151);
-            this.txtCidadeFun.Name = "txtCidadeFun";
-            this.txtCidadeFun.Size = new System.Drawing.Size(171, 20);
-            this.txtCidadeFun.TabIndex = 78;
+            this.txtCor.Location = new System.Drawing.Point(104, 99);
+            this.txtCor.Name = "txtCor";
+            this.txtCor.Size = new System.Drawing.Size(158, 22);
+            this.txtCor.TabIndex = 77;
             // 
-            // txtNumFun
+            // txtSexo
             // 
-            this.txtNumFun.Location = new System.Drawing.Point(242, 153);
-            this.txtNumFun.Name = "txtNumFun";
-            this.txtNumFun.Size = new System.Drawing.Size(158, 20);
-            this.txtNumFun.TabIndex = 77;
+            this.txtSexo.Location = new System.Drawing.Point(354, 71);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(171, 22);
+            this.txtSexo.TabIndex = 76;
             // 
-            // txtEndFun
+            // txtPorte
             // 
-            this.txtEndFun.Location = new System.Drawing.Point(492, 125);
-            this.txtEndFun.Name = "txtEndFun";
-            this.txtEndFun.Size = new System.Drawing.Size(171, 20);
-            this.txtEndFun.TabIndex = 76;
+            this.txtPorte.Location = new System.Drawing.Point(104, 73);
+            this.txtPorte.Name = "txtPorte";
+            this.txtPorte.Size = new System.Drawing.Size(158, 22);
+            this.txtPorte.TabIndex = 75;
             // 
-            // txtCepFun
+            // txtRaca
             // 
-            this.txtCepFun.Location = new System.Drawing.Point(242, 127);
-            this.txtCepFun.Name = "txtCepFun";
-            this.txtCepFun.Size = new System.Drawing.Size(158, 20);
-            this.txtCepFun.TabIndex = 75;
+            this.txtRaca.Location = new System.Drawing.Point(354, 45);
+            this.txtRaca.Name = "txtRaca";
+            this.txtRaca.Size = new System.Drawing.Size(171, 22);
+            this.txtRaca.TabIndex = 74;
             // 
-            // txtTelefoneFun
+            // txtNome
             // 
-            this.txtTelefoneFun.Location = new System.Drawing.Point(492, 99);
-            this.txtTelefoneFun.Name = "txtTelefoneFun";
-            this.txtTelefoneFun.Size = new System.Drawing.Size(171, 20);
-            this.txtTelefoneFun.TabIndex = 74;
+            this.txtNome.Location = new System.Drawing.Point(104, 47);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(158, 22);
+            this.txtNome.TabIndex = 73;
             // 
-            // txtCpfFun
+            // txtCod
             // 
-            this.txtCpfFun.Location = new System.Drawing.Point(242, 101);
-            this.txtCpfFun.Name = "txtCpfFun";
-            this.txtCpfFun.Size = new System.Drawing.Size(158, 20);
-            this.txtCpfFun.TabIndex = 73;
-            // 
-            // txtCodFun
-            // 
-            this.txtCodFun.Location = new System.Drawing.Point(242, 75);
-            this.txtCodFun.Name = "txtCodFun";
-            this.txtCodFun.Size = new System.Drawing.Size(55, 20);
-            this.txtCodFun.TabIndex = 72;
+            this.txtCod.Location = new System.Drawing.Point(354, 21);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(41, 22);
+            this.txtCod.TabIndex = 72;
             // 
             // lblEspecie
             // 
             this.lblEspecie.AutoSize = true;
             this.lblEspecie.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEspecie.Location = new System.Drawing.Point(411, 158);
+            this.lblEspecie.Location = new System.Drawing.Point(273, 104);
             this.lblEspecie.Name = "lblEspecie";
-            this.lblEspecie.Size = new System.Drawing.Size(55, 13);
+            this.lblEspecie.Size = new System.Drawing.Size(69, 16);
             this.lblEspecie.TabIndex = 71;
             this.lblEspecie.Text = "ESPÉCIE:";
             // 
@@ -124,9 +120,9 @@
             // 
             this.lblCor.AutoSize = true;
             this.lblCor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCor.Location = new System.Drawing.Point(161, 160);
+            this.lblCor.Location = new System.Drawing.Point(23, 106);
             this.lblCor.Name = "lblCor";
-            this.lblCor.Size = new System.Drawing.Size(33, 13);
+            this.lblCor.Size = new System.Drawing.Size(40, 16);
             this.lblCor.TabIndex = 70;
             this.lblCor.Text = "COR:";
             // 
@@ -134,9 +130,9 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSexo.Location = new System.Drawing.Point(411, 132);
+            this.lblSexo.Location = new System.Drawing.Point(273, 78);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(39, 13);
+            this.lblSexo.Size = new System.Drawing.Size(47, 16);
             this.lblSexo.TabIndex = 69;
             this.lblSexo.Text = "SEXO:";
             // 
@@ -144,9 +140,9 @@
             // 
             this.lblPorte.AutoSize = true;
             this.lblPorte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPorte.Location = new System.Drawing.Point(161, 134);
+            this.lblPorte.Location = new System.Drawing.Point(23, 80);
             this.lblPorte.Name = "lblPorte";
-            this.lblPorte.Size = new System.Drawing.Size(47, 13);
+            this.lblPorte.Size = new System.Drawing.Size(56, 16);
             this.lblPorte.TabIndex = 68;
             this.lblPorte.Text = "PORTE:";
             // 
@@ -154,9 +150,9 @@
             // 
             this.lblRaca.AutoSize = true;
             this.lblRaca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRaca.Location = new System.Drawing.Point(411, 106);
+            this.lblRaca.Location = new System.Drawing.Point(273, 52);
             this.lblRaca.Name = "lblRaca";
-            this.lblRaca.Size = new System.Drawing.Size(39, 13);
+            this.lblRaca.Size = new System.Drawing.Size(48, 16);
             this.lblRaca.TabIndex = 67;
             this.lblRaca.Text = "RAÇA:";
             // 
@@ -164,9 +160,9 @@
             // 
             this.lblNomePet.AutoSize = true;
             this.lblNomePet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNomePet.Location = new System.Drawing.Point(158, 108);
+            this.lblNomePet.Location = new System.Drawing.Point(20, 54);
             this.lblNomePet.Name = "lblNomePet";
-            this.lblNomePet.Size = new System.Drawing.Size(42, 13);
+            this.lblNomePet.Size = new System.Drawing.Size(51, 16);
             this.lblNomePet.TabIndex = 66;
             this.lblNomePet.Text = "NOME:";
             // 
@@ -191,6 +187,7 @@
             this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBuscar
             // 
@@ -201,6 +198,7 @@
             this.btnBuscar.TabIndex = 21;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCadastrar
             // 
@@ -211,10 +209,12 @@
             this.btnCadastrar.TabIndex = 19;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.lblFechar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -237,9 +237,9 @@
             // 
             this.lblCodPet.AutoSize = true;
             this.lblCodPet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodPet.Location = new System.Drawing.Point(343, 79);
+            this.lblCodPet.Location = new System.Drawing.Point(22, 26);
             this.lblCodPet.Name = "lblCodPet";
-            this.lblCodPet.Size = new System.Drawing.Size(57, 13);
+            this.lblCodPet.Size = new System.Drawing.Size(68, 16);
             this.lblCodPet.TabIndex = 64;
             this.lblCodPet.Text = "COD PET:";
             // 
@@ -247,11 +247,57 @@
             // 
             this.lblCodCli.AutoSize = true;
             this.lblCodCli.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodCli.Location = new System.Drawing.Point(160, 82);
+            this.lblCodCli.Location = new System.Drawing.Point(262, 24);
             this.lblCodCli.Name = "lblCodCli";
-            this.lblCodCli.Size = new System.Drawing.Size(71, 13);
+            this.lblCodCli.Size = new System.Drawing.Size(86, 16);
             this.lblCodCli.TabIndex = 65;
             this.lblCodCli.Text = "CÓDIGO CLI:";
+            // 
+            // txtCodP
+            // 
+            this.txtCodP.Location = new System.Drawing.Point(104, 21);
+            this.txtCodP.Name = "txtCodP";
+            this.txtCodP.Size = new System.Drawing.Size(41, 22);
+            this.txtCodP.TabIndex = 79;
+            // 
+            // grpCadastroPets
+            // 
+            this.grpCadastroPets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grpCadastroPets.Controls.Add(this.txtCodP);
+            this.grpCadastroPets.Controls.Add(this.txtSexo);
+            this.grpCadastroPets.Controls.Add(this.lblCodCli);
+            this.grpCadastroPets.Controls.Add(this.txtEspecie);
+            this.grpCadastroPets.Controls.Add(this.lblCodPet);
+            this.grpCadastroPets.Controls.Add(this.txtCor);
+            this.grpCadastroPets.Controls.Add(this.lblNomePet);
+            this.grpCadastroPets.Controls.Add(this.lblRaca);
+            this.grpCadastroPets.Controls.Add(this.txtPorte);
+            this.grpCadastroPets.Controls.Add(this.lblPorte);
+            this.grpCadastroPets.Controls.Add(this.txtRaca);
+            this.grpCadastroPets.Controls.Add(this.lblSexo);
+            this.grpCadastroPets.Controls.Add(this.txtNome);
+            this.grpCadastroPets.Controls.Add(this.lblCor);
+            this.grpCadastroPets.Controls.Add(this.txtCod);
+            this.grpCadastroPets.Controls.Add(this.lblEspecie);
+            this.grpCadastroPets.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpCadastroPets.Location = new System.Drawing.Point(135, 66);
+            this.grpCadastroPets.Name = "grpCadastroPets";
+            this.grpCadastroPets.Size = new System.Drawing.Size(539, 131);
+            this.grpCadastroPets.TabIndex = 80;
+            this.grpCadastroPets.TabStop = false;
+            this.grpCadastroPets.Text = "Cadastro Pet";
+            this.grpCadastroPets.Enter += new System.EventHandler(this.grpCadastroPets_Enter);
+            // 
+            // lblFechar
+            // 
+            this.lblFechar.AutoSize = true;
+            this.lblFechar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFechar.Location = new System.Drawing.Point(660, 9);
+            this.lblFechar.Name = "lblFechar";
+            this.lblFechar.Size = new System.Drawing.Size(14, 13);
+            this.lblFechar.TabIndex = 81;
+            this.lblFechar.Text = "X";
+            this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
             // 
             // frmPet
             // 
@@ -259,46 +305,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(686, 386);
-            this.Controls.Add(this.txtNomeFun);
-            this.Controls.Add(this.txtCidadeFun);
-            this.Controls.Add(this.txtNumFun);
-            this.Controls.Add(this.txtEndFun);
-            this.Controls.Add(this.txtCepFun);
-            this.Controls.Add(this.txtTelefoneFun);
-            this.Controls.Add(this.txtCpfFun);
-            this.Controls.Add(this.txtCodFun);
-            this.Controls.Add(this.lblEspecie);
-            this.Controls.Add(this.lblCor);
-            this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.lblPorte);
-            this.Controls.Add(this.lblRaca);
-            this.Controls.Add(this.lblNomePet);
+            this.Controls.Add(this.grpCadastroPets);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblCodPet);
-            this.Controls.Add(this.lblCodCli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pet";
+            this.Load += new System.EventHandler(this.frmPet_Load_1);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.grpCadastroPets.ResumeLayout(false);
+            this.grpCadastroPets.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtNomeFun;
-        private System.Windows.Forms.TextBox txtCidadeFun;
-        private System.Windows.Forms.TextBox txtNumFun;
-        private System.Windows.Forms.TextBox txtEndFun;
-        private System.Windows.Forms.TextBox txtCepFun;
-        private System.Windows.Forms.TextBox txtTelefoneFun;
-        private System.Windows.Forms.TextBox txtCpfFun;
-        private System.Windows.Forms.TextBox txtCodFun;
+        private System.Windows.Forms.TextBox txtEspecie;
+        private System.Windows.Forms.TextBox txtCor;
+        private System.Windows.Forms.TextBox txtSexo;
+        private System.Windows.Forms.TextBox txtPorte;
+        private System.Windows.Forms.TextBox txtRaca;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label lblEspecie;
         private System.Windows.Forms.Label lblCor;
         private System.Windows.Forms.Label lblSexo;
@@ -313,5 +344,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCodPet;
         private System.Windows.Forms.Label lblCodCli;
+        private System.Windows.Forms.TextBox txtCodP;
+        private System.Windows.Forms.GroupBox grpCadastroPets;
+        private System.Windows.Forms.Label lblFechar;
     }
 }

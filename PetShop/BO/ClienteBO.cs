@@ -18,6 +18,7 @@ namespace PetShop.BO
                 clienteDAO.Insert(cliente);
             }
         }
+
         public void Editar(Cliente cliente)
         {
             ClienteDAO clienteDAO = new ClienteDAO();
@@ -27,6 +28,7 @@ namespace PetShop.BO
 
             }
         }
+
         public void Buscar(Cliente cliente)
         {
             ClienteDAO clienteDAO = new ClienteDAO();

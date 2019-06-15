@@ -48,6 +48,7 @@
             this.lblSituacao = new System.Windows.Forms.Label();
             this.txtDataHora = new System.Windows.Forms.TextBox();
             this.txtSituacao = new System.Windows.Forms.TextBox();
+            this.lblFechar = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -115,10 +116,12 @@
             this.btnCadastrar.TabIndex = 19;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.lblFechar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -139,28 +142,28 @@
             // 
             // txtCodServico
             // 
-            this.txtCodServico.Location = new System.Drawing.Point(498, 66);
+            this.txtCodServico.Location = new System.Drawing.Point(502, 95);
             this.txtCodServico.Name = "txtCodServico";
             this.txtCodServico.Size = new System.Drawing.Size(58, 20);
             this.txtCodServico.TabIndex = 87;
             // 
             // txtCodFunc
             // 
-            this.txtCodFunc.Location = new System.Drawing.Point(498, 95);
+            this.txtCodFunc.Location = new System.Drawing.Point(502, 124);
             this.txtCodFunc.Name = "txtCodFunc";
             this.txtCodFunc.Size = new System.Drawing.Size(58, 20);
             this.txtCodFunc.TabIndex = 86;
             // 
             // txtCodPet
             // 
-            this.txtCodPet.Location = new System.Drawing.Point(282, 98);
+            this.txtCodPet.Location = new System.Drawing.Point(286, 127);
             this.txtCodPet.Name = "txtCodPet";
             this.txtCodPet.Size = new System.Drawing.Size(58, 20);
             this.txtCodPet.TabIndex = 85;
             // 
             // txtCodAtendimento
             // 
-            this.txtCodAtendimento.Location = new System.Drawing.Point(282, 66);
+            this.txtCodAtendimento.Location = new System.Drawing.Point(286, 95);
             this.txtCodAtendimento.Name = "txtCodAtendimento";
             this.txtCodAtendimento.Size = new System.Drawing.Size(58, 20);
             this.txtCodAtendimento.TabIndex = 84;
@@ -169,7 +172,7 @@
             // 
             this.lblRaca.AutoSize = true;
             this.lblRaca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRaca.Location = new System.Drawing.Point(359, 104);
+            this.lblRaca.Location = new System.Drawing.Point(363, 133);
             this.lblRaca.Name = "lblRaca";
             this.lblRaca.Size = new System.Drawing.Size(129, 13);
             this.lblRaca.TabIndex = 83;
@@ -179,7 +182,7 @@
             // 
             this.lblNomePet.AutoSize = true;
             this.lblNomePet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNomePet.Location = new System.Drawing.Point(143, 107);
+            this.lblNomePet.Location = new System.Drawing.Point(147, 136);
             this.lblNomePet.Name = "lblNomePet";
             this.lblNomePet.Size = new System.Drawing.Size(76, 13);
             this.lblNomePet.TabIndex = 82;
@@ -189,7 +192,7 @@
             // 
             this.lblCodPet.AutoSize = true;
             this.lblCodPet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodPet.Location = new System.Drawing.Point(359, 69);
+            this.lblCodPet.Location = new System.Drawing.Point(363, 98);
             this.lblCodPet.Name = "lblCodPet";
             this.lblCodPet.Size = new System.Drawing.Size(83, 13);
             this.lblCodPet.TabIndex = 80;
@@ -199,7 +202,7 @@
             // 
             this.lblCodAtendimento.AutoSize = true;
             this.lblCodAtendimento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodAtendimento.Location = new System.Drawing.Point(143, 69);
+            this.lblCodAtendimento.Location = new System.Drawing.Point(147, 98);
             this.lblCodAtendimento.Name = "lblCodAtendimento";
             this.lblCodAtendimento.Size = new System.Drawing.Size(134, 13);
             this.lblCodAtendimento.TabIndex = 81;
@@ -209,7 +212,7 @@
             // 
             this.lblDataHora.AutoSize = true;
             this.lblDataHora.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDataHora.Location = new System.Drawing.Point(143, 133);
+            this.lblDataHora.Location = new System.Drawing.Point(147, 162);
             this.lblDataHora.Name = "lblDataHora";
             this.lblDataHora.Size = new System.Drawing.Size(75, 13);
             this.lblDataHora.TabIndex = 88;
@@ -219,7 +222,7 @@
             // 
             this.lblSituacao.AutoSize = true;
             this.lblSituacao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSituacao.Location = new System.Drawing.Point(393, 130);
+            this.lblSituacao.Location = new System.Drawing.Point(397, 159);
             this.lblSituacao.Name = "lblSituacao";
             this.lblSituacao.Size = new System.Drawing.Size(64, 13);
             this.lblSituacao.TabIndex = 89;
@@ -227,17 +230,27 @@
             // 
             // txtDataHora
             // 
-            this.txtDataHora.Location = new System.Drawing.Point(282, 127);
+            this.txtDataHora.Location = new System.Drawing.Point(286, 156);
             this.txtDataHora.Name = "txtDataHora";
             this.txtDataHora.Size = new System.Drawing.Size(84, 20);
             this.txtDataHora.TabIndex = 90;
             // 
             // txtSituacao
             // 
-            this.txtSituacao.Location = new System.Drawing.Point(475, 126);
+            this.txtSituacao.Location = new System.Drawing.Point(502, 154);
             this.txtSituacao.Name = "txtSituacao";
             this.txtSituacao.Size = new System.Drawing.Size(130, 20);
             this.txtSituacao.TabIndex = 91;
+            // 
+            // lblFechar
+            // 
+            this.lblFechar.AutoSize = true;
+            this.lblFechar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFechar.Location = new System.Drawing.Point(660, 9);
+            this.lblFechar.Name = "lblFechar";
+            this.lblFechar.Size = new System.Drawing.Size(14, 13);
+            this.lblFechar.TabIndex = 14;
+            this.lblFechar.Text = "X";
             // 
             // frmAtendimento
             // 
@@ -293,5 +306,6 @@
         private System.Windows.Forms.Label lblSituacao;
         private System.Windows.Forms.TextBox txtDataHora;
         private System.Windows.Forms.TextBox txtSituacao;
+        private System.Windows.Forms.Label lblFechar;
     }
 }

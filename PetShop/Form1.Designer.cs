@@ -35,9 +35,9 @@
             this.btnFuncionario = new System.Windows.Forms.PictureBox();
             this.brnAtendimento = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblFechar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lblFechar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnServiços)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCliente)).BeginInit();
@@ -72,6 +72,7 @@
             this.btnPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPet.TabIndex = 9;
             this.btnPet.TabStop = false;
+            this.btnPet.Click += new System.EventHandler(this.btnPet_Click);
             // 
             // btnCliente
             // 
@@ -113,6 +114,7 @@
             this.brnAtendimento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.brnAtendimento.TabIndex = 6;
             this.brnAtendimento.TabStop = false;
+            this.brnAtendimento.Click += new System.EventHandler(this.brnAtendimento_Click);
             // 
             // panel1
             // 
@@ -129,6 +131,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 114);
             this.panel1.TabIndex = 12;
+            // 
+            // lblFechar
+            // 
+            this.lblFechar.AutoSize = true;
+            this.lblFechar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFechar.Location = new System.Drawing.Point(660, 3);
+            this.lblFechar.Name = "lblFechar";
+            this.lblFechar.Size = new System.Drawing.Size(14, 13);
+            this.lblFechar.TabIndex = 13;
+            this.lblFechar.Text = "X";
+            this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
             // 
             // label1
             // 
@@ -152,16 +165,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
-            // 
-            // lblFechar
-            // 
-            this.lblFechar.AutoSize = true;
-            this.lblFechar.Location = new System.Drawing.Point(660, 3);
-            this.lblFechar.Name = "lblFechar";
-            this.lblFechar.Size = new System.Drawing.Size(14, 13);
-            this.lblFechar.TabIndex = 13;
-            this.lblFechar.Text = "X";
-            this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
             // 
             // Form1
             // 

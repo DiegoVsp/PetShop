@@ -10,12 +10,19 @@ namespace PetShop.BO
 {
     public class AtendimentoBO
     {
-        public void Gravar(frmAtendimento atendimento)
+        public void GravarAtendimento(Atendimento atendimento)
         {
-            AtendimentoDAO livroDao = new AtendimentoDAO();
-            // Regra só será gravada se o autor for preenchido, se for nulo não poderá
 
-            
+            AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
+
+            //if ((atendimento.Pet != null) && (atendimento.Servico != null) && (atendimento.Funcionario != null))
+           // {
+                if ((atendimento.CodAtendimento != 0))
+                {
+                atendimentoDAO.Insert(atendimento);
+                }
+           //     else  { }
+           // }
 
         }
     }
