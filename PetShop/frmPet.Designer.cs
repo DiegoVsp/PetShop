@@ -30,7 +30,6 @@
         {
             this.txtEspecie = new System.Windows.Forms.TextBox();
             this.txtCor = new System.Windows.Forms.TextBox();
-            this.txtSexo = new System.Windows.Forms.TextBox();
             this.txtPorte = new System.Windows.Forms.TextBox();
             this.txtRaca = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -41,20 +40,18 @@
             this.lblPorte = new System.Windows.Forms.Label();
             this.lblRaca = new System.Windows.Forms.Label();
             this.lblNomePet = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFechar = new System.Windows.Forms.Label();
             this.lblCodPet = new System.Windows.Forms.Label();
             this.lblCodCli = new System.Windows.Forms.Label();
             this.txtCodP = new System.Windows.Forms.TextBox();
             this.grpCadastroPets = new System.Windows.Forms.GroupBox();
-            this.lblFechar = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.txtSexo = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grpCadastroPets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEspecie
@@ -70,13 +67,6 @@
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(158, 22);
             this.txtCor.TabIndex = 77;
-            // 
-            // txtSexo
-            // 
-            this.txtSexo.Location = new System.Drawing.Point(354, 71);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(171, 22);
-            this.txtSexo.TabIndex = 76;
             // 
             // txtPorte
             // 
@@ -166,22 +156,10 @@
             this.lblNomePet.TabIndex = 66;
             this.lblNomePet.Text = "NOME:";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel3.Controls.Add(this.btnEditar);
-            this.panel3.Controls.Add(this.btnBuscar);
-            this.panel3.Controls.Add(this.btnCadastrar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 55);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(118, 331);
-            this.panel3.TabIndex = 63;
-            // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(10, 69);
+            this.btnEditar.Location = new System.Drawing.Point(466, 179);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(101, 23);
             this.btnEditar.TabIndex = 20;
@@ -192,7 +170,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(10, 40);
+            this.btnBuscar.Location = new System.Drawing.Point(232, 179);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 23);
             this.btnBuscar.TabIndex = 21;
@@ -203,7 +181,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(10, 11);
+            this.btnCadastrar.Location = new System.Drawing.Point(12, 179);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(101, 23);
             this.btnCadastrar.TabIndex = 19;
@@ -211,27 +189,16 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // panel1
+            // lblFechar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.lblFechar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 55);
-            this.panel1.TabIndex = 62;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Magneto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(296, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PETS";
+            this.lblFechar.AutoSize = true;
+            this.lblFechar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFechar.Location = new System.Drawing.Point(573, 9);
+            this.lblFechar.Name = "lblFechar";
+            this.lblFechar.Size = new System.Drawing.Size(14, 13);
+            this.lblFechar.TabIndex = 81;
+            this.lblFechar.Text = "X";
+            this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
             // 
             // lblCodPet
             // 
@@ -280,52 +247,57 @@
             this.grpCadastroPets.Controls.Add(this.txtCod);
             this.grpCadastroPets.Controls.Add(this.lblEspecie);
             this.grpCadastroPets.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpCadastroPets.Location = new System.Drawing.Point(135, 66);
+            this.grpCadastroPets.Location = new System.Drawing.Point(12, 23);
             this.grpCadastroPets.Name = "grpCadastroPets";
-            this.grpCadastroPets.Size = new System.Drawing.Size(539, 131);
+            this.grpCadastroPets.Size = new System.Drawing.Size(555, 140);
             this.grpCadastroPets.TabIndex = 80;
             this.grpCadastroPets.TabStop = false;
-            this.grpCadastroPets.Text = "Cadastro Pet";
+            this.grpCadastroPets.Text = "CADASTRO DE ANIMAIS";
             this.grpCadastroPets.Enter += new System.EventHandler(this.grpCadastroPets_Enter);
             // 
-            // lblFechar
+            // txtSexo
             // 
-            this.lblFechar.AutoSize = true;
-            this.lblFechar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblFechar.Location = new System.Drawing.Point(660, 9);
-            this.lblFechar.Name = "lblFechar";
-            this.lblFechar.Size = new System.Drawing.Size(14, 13);
-            this.lblFechar.TabIndex = 81;
-            this.lblFechar.Text = "X";
-            this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
+            this.txtSexo.Location = new System.Drawing.Point(354, 71);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(171, 22);
+            this.txtSexo.TabIndex = 76;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 220);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(555, 154);
+            this.dataGridView1.TabIndex = 81;
             // 
             // frmPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(686, 386);
+            this.ClientSize = new System.Drawing.Size(595, 386);
+            this.Controls.Add(this.lblFechar);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.grpCadastroPets);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pet";
             this.Load += new System.EventHandler(this.frmPet_Load_1);
-            this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.grpCadastroPets.ResumeLayout(false);
             this.grpCadastroPets.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.TextBox txtEspecie;
         private System.Windows.Forms.TextBox txtCor;
-        private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.TextBox txtPorte;
         private System.Windows.Forms.TextBox txtRaca;
         private System.Windows.Forms.TextBox txtNome;
@@ -336,16 +308,15 @@
         private System.Windows.Forms.Label lblPorte;
         private System.Windows.Forms.Label lblRaca;
         private System.Windows.Forms.Label lblNomePet;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCodPet;
         private System.Windows.Forms.Label lblCodCli;
         private System.Windows.Forms.TextBox txtCodP;
         private System.Windows.Forms.GroupBox grpCadastroPets;
         private System.Windows.Forms.Label lblFechar;
+        private System.Windows.Forms.TextBox txtSexo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
