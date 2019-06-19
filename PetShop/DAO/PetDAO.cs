@@ -80,5 +80,35 @@ namespace PetShop.DAO
             }
             return pet;
         }
+
+        //Update
+        public void Update(Pet pet)
+        {
+            try
+            {
+
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "Update Pet set codcliente=@codcliente,nome=@nome,especie=@especie,raca=@raca,porte=@porte,sexo=@sexo,cor=@cor where codpet=@codpet";
+
+                comando.Parameters.AddWithValue("@codcliente", pet.Cliente.Codigo);
+                comando.Parameters.AddWithValue("@nome", pet.Nome);
+                comando.Parameters.AddWithValue("@especie", pet.Especie);
+                comando.Parameters.AddWithValue("@raca", pet.Raca);
+                comando.Parameters.AddWithValue("@porte", pet.Porte);
+                comando.Parameters.AddWithValue("@sexo", pet.Sexo);
+                comando.Parameters.AddWithValue("@cor", pet.Cor);
+                comando.Parameters.AddWithValue("@codpet", pet.CodPet);
+
+                ConexaoBanco.CRUD(comando);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possivel editar o Livro" + ex.Message);
+            }
+
+
+
+        }
     }
 }

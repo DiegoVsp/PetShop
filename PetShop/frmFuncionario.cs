@@ -39,9 +39,9 @@ namespace PetShop
             funcionario.Telefone = txtTelefone.Text;
             funcionario.CartTrab = txtCartTrab.Text;
             funcionario.Salario = Convert.ToDecimal(txtSalario.Text);
-            
-                funcionarioBO.GravarFuncionario(funcionario);
-                MessageBox.Show("Funcionário Cadastrado com sucesso!!!");
+
+            funcionarioBO.GravarFuncionario(funcionario);
+            MessageBox.Show("Funcionário Cadastrado com sucesso!!!");
 
 
             txtCod.Clear();

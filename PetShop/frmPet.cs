@@ -82,12 +82,12 @@ namespace PetShop
                 {
 
                     txtCod.Text = Convert.ToString(pet.Cliente.Codigo);
-                    txtNome.Text = pet.Nome.ToUpper();  // colocar .ToUpper() puxa toda informação em maiuscula
-                    txtPorte.Text = pet.Porte.ToUpper();
-                    txtCor.Text = pet.Cor.ToUpper();
-                    txtRaca.Text = pet.Raca.ToUpper();
-                    txtSexo.Text = pet.Sexo.ToUpper();
-                    txtEspecie.Text = pet.Especie.ToUpper();
+                    txtNome.Text = pet.Nome; // colocar .ToUpper() puxa toda informação em maiuscula
+                    txtPorte.Text = pet.Porte;
+                    txtCor.Text = pet.Cor;
+                    txtRaca.Text = pet.Raca;
+                    txtSexo.Text = pet.Sexo;
+                    txtEspecie.Text = pet.Especie;
                 }
             }
             catch
@@ -98,6 +98,21 @@ namespace PetShop
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            Pet pet = new Pet();
+            PetBO petBO = new PetBO();
+
+            pet.CodPet= Convert.ToInt16(txtCodP.Text);
+            pet.Cliente.Codigo = Convert.ToInt16(txtCod.Text);
+            pet.Nome = txtNome.Text;
+            pet.Raca = txtRaca.Text;
+            pet.Porte = txtPorte.Text;
+            pet.Sexo = txtSexo.Text;
+            pet.Cor = txtCor.Text;
+            pet.Especie = txtEspecie.Text;
+           
+                petBO.Editar(pet);
+                MessageBox.Show("Dados atualizados com sucesso!!");
+           
 
         }
 

@@ -48,7 +48,6 @@
             this.lblCpf = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnCalcularSalário = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -56,13 +55,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblFechar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(252, 95);
+            this.txtNome.Location = new System.Drawing.Point(156, 91);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(171, 20);
             this.txtNome.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             this.lblSalario.AutoSize = true;
             this.lblSalario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSalario.Location = new System.Drawing.Point(447, 275);
+            this.lblSalario.Location = new System.Drawing.Point(54, 208);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(56, 13);
             this.lblSalario.TabIndex = 65;
@@ -79,14 +79,14 @@
             // 
             // txtSalario
             // 
-            this.txtSalario.Location = new System.Drawing.Point(503, 272);
+            this.txtSalario.Location = new System.Drawing.Point(156, 201);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(171, 20);
             this.txtSalario.TabIndex = 10;
             // 
             // txtCartTrab
             // 
-            this.txtCartTrab.Location = new System.Drawing.Point(252, 272);
+            this.txtCartTrab.Location = new System.Drawing.Point(156, 171);
             this.txtCartTrab.Name = "txtCartTrab";
             this.txtCartTrab.Size = new System.Drawing.Size(171, 20);
             this.txtCartTrab.TabIndex = 9;
@@ -95,7 +95,7 @@
             // 
             this.lblCartTrab.AutoSize = true;
             this.lblCartTrab.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCartTrab.Location = new System.Drawing.Point(161, 279);
+            this.lblCartTrab.Location = new System.Drawing.Point(54, 178);
             this.lblCartTrab.Name = "lblCartTrab";
             this.lblCartTrab.Size = new System.Drawing.Size(96, 13);
             this.lblCartTrab.TabIndex = 62;
@@ -103,28 +103,28 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(503, 196);
+            this.txtCidade.Location = new System.Drawing.Point(478, 171);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(171, 20);
             this.txtCidade.TabIndex = 7;
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(252, 236);
+            this.txtNum.Location = new System.Drawing.Point(156, 146);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(171, 20);
             this.txtNum.TabIndex = 8;
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(252, 198);
+            this.txtEnd.Location = new System.Drawing.Point(478, 143);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(171, 20);
             this.txtEnd.TabIndex = 6;
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(254, 161);
+            this.txtCep.Location = new System.Drawing.Point(478, 117);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(171, 20);
             this.txtCep.TabIndex = 5;
@@ -132,21 +132,21 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(252, 127);
+            this.txtTelefone.Location = new System.Drawing.Point(156, 117);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(171, 20);
             this.txtTelefone.TabIndex = 4;
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(503, 93);
+            this.txtCpf.Location = new System.Drawing.Point(478, 88);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(117, 20);
             this.txtCpf.TabIndex = 3;
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(254, 69);
+            this.txtCod.Location = new System.Drawing.Point(156, 61);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(48, 20);
             this.txtCod.TabIndex = 1;
@@ -155,7 +155,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTelefone.Location = new System.Drawing.Point(161, 134);
+            this.lblTelefone.Location = new System.Drawing.Point(54, 124);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(66, 13);
             this.lblTelefone.TabIndex = 54;
@@ -165,7 +165,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCidade.Location = new System.Drawing.Point(447, 201);
+            this.lblCidade.Location = new System.Drawing.Point(376, 178);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(50, 13);
             this.lblCidade.TabIndex = 53;
@@ -175,7 +175,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumero.Location = new System.Drawing.Point(161, 243);
+            this.lblNumero.Location = new System.Drawing.Point(54, 153);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(58, 13);
             this.lblNumero.TabIndex = 52;
@@ -185,7 +185,7 @@
             // 
             this.lblCep.AutoSize = true;
             this.lblCep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCep.Location = new System.Drawing.Point(163, 168);
+            this.lblCep.Location = new System.Drawing.Point(378, 122);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(31, 13);
             this.lblCep.TabIndex = 51;
@@ -195,7 +195,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEndereco.Location = new System.Drawing.Point(161, 203);
+            this.lblEndereco.Location = new System.Drawing.Point(376, 146);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(70, 13);
             this.lblEndereco.TabIndex = 50;
@@ -205,7 +205,7 @@
             // 
             this.lblCpf.AutoSize = true;
             this.lblCpf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCpf.Location = new System.Drawing.Point(448, 100);
+            this.lblCpf.Location = new System.Drawing.Point(379, 91);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(30, 13);
             this.lblCpf.TabIndex = 49;
@@ -215,7 +215,7 @@
             // 
             this.lblCod.AutoSize = true;
             this.lblCod.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCod.Location = new System.Drawing.Point(163, 74);
+            this.lblCod.Location = new System.Drawing.Point(54, 66);
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(52, 13);
             this.lblCod.TabIndex = 48;
@@ -225,31 +225,18 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNome.Location = new System.Drawing.Point(161, 104);
+            this.lblNome.Location = new System.Drawing.Point(54, 100);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(42, 13);
             this.lblNome.TabIndex = 47;
             this.lblNome.Text = "NOME:";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel3.Controls.Add(this.btnCalcularSalário);
-            this.panel3.Controls.Add(this.btnEditar);
-            this.panel3.Controls.Add(this.btnBuscar);
-            this.panel3.Controls.Add(this.btnCadastrar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 55);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(139, 331);
-            this.panel3.TabIndex = 46;
-            // 
             // btnCalcularSalário
             // 
             this.btnCalcularSalário.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcularSalário.Location = new System.Drawing.Point(12, 106);
+            this.btnCalcularSalário.Location = new System.Drawing.Point(539, 223);
             this.btnCalcularSalário.Name = "btnCalcularSalário";
-            this.btnCalcularSalário.Size = new System.Drawing.Size(110, 37);
+            this.btnCalcularSalário.Size = new System.Drawing.Size(110, 38);
             this.btnCalcularSalário.TabIndex = 22;
             this.btnCalcularSalário.Text = "CALCULAR SALÁRIO";
             this.btnCalcularSalário.UseVisualStyleBackColor = true;
@@ -257,7 +244,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(12, 41);
+            this.btnEditar.Location = new System.Drawing.Point(214, 238);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(110, 23);
             this.btnEditar.TabIndex = 20;
@@ -268,7 +255,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(12, 75);
+            this.btnBuscar.Location = new System.Drawing.Point(387, 238);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 23);
             this.btnBuscar.TabIndex = 21;
@@ -279,7 +266,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(10, 11);
+            this.btnCadastrar.Location = new System.Drawing.Point(57, 238);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(112, 23);
             this.btnCadastrar.TabIndex = 19;
@@ -321,15 +308,28 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "FUNCIONÁRIOS";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(57, 267);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(592, 104);
+            this.dataGridView1.TabIndex = 66;
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(686, 386);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnCalcularSalário);
             this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lblSalario);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtCartTrab);
             this.Controls.Add(this.lblCartTrab);
             this.Controls.Add(this.txtCidade);
@@ -347,15 +347,14 @@
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.lblCod);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
-            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,7 +382,6 @@
         private System.Windows.Forms.Label lblCpf;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCalcularSalário;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBuscar;
@@ -391,5 +389,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFechar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

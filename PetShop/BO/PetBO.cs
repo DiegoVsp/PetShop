@@ -39,7 +39,15 @@ namespace PetShop.BO
         }
 
         //UPDATE
+        public void Editar(Pet pet)
+        {
 
+            PetDAO petDAO = new PetDAO();
+            if(pet.Nome != "")
+            {
+                petDAO.Update(pet);
+            }
+        }
     }
 
 

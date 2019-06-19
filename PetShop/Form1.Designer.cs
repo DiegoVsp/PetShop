@@ -59,6 +59,7 @@
             this.btnServiços.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnServiços.TabIndex = 10;
             this.btnServiços.TabStop = false;
+            this.btnServiços.Click += new System.EventHandler(this.btnServiços_Click);
             // 
             // btnPet
             // 

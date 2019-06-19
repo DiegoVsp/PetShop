@@ -33,5 +33,10 @@ namespace PetShop
 
             atendimentoBO.GravarAtendimento(atendimento);
         }
+
+        private void lblFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

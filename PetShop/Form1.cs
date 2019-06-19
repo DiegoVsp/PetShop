@@ -45,5 +45,11 @@ namespace PetShop
             frmPet form = new frmPet();
             form.Show();
         }
+
+        private void btnServiços_Click(object sender, EventArgs e)
+        {
+            frmServicos form = new frmServicos();
+            form.Show();
+        }
     }
 }

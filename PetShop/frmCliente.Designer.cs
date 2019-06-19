@@ -54,16 +54,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(12, 135);
+            this.btnEditar.Location = new System.Drawing.Point(519, 207);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(101, 37);
             this.btnEditar.TabIndex = 20;
@@ -74,7 +74,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(12, 70);
+            this.btnBuscar.Location = new System.Drawing.Point(295, 207);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 37);
             this.btnBuscar.TabIndex = 21;
@@ -85,7 +85,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 16);
+            this.btnCadastrar.Location = new System.Drawing.Point(66, 207);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(101, 37);
             this.btnCadastrar.TabIndex = 19;
@@ -95,56 +95,56 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(249, 271);
+            this.txtEmail.Location = new System.Drawing.Point(423, 175);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(197, 20);
             this.txtEmail.TabIndex = 9;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(503, 196);
+            this.txtCidade.Location = new System.Drawing.Point(423, 149);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(154, 20);
             this.txtCidade.TabIndex = 7;
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(249, 236);
+            this.txtNum.Location = new System.Drawing.Point(154, 177);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(63, 20);
             this.txtNum.TabIndex = 8;
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(249, 200);
+            this.txtEnd.Location = new System.Drawing.Point(154, 151);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(171, 20);
             this.txtEnd.TabIndex = 6;
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(249, 128);
+            this.txtTelefone.Location = new System.Drawing.Point(423, 120);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(97, 20);
+            this.txtTelefone.Size = new System.Drawing.Size(128, 20);
             this.txtTelefone.TabIndex = 4;
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(503, 95);
+            this.txtCpf.Location = new System.Drawing.Point(423, 92);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(154, 20);
             this.txtCpf.TabIndex = 3;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(249, 96);
+            this.txtNome.Location = new System.Drawing.Point(154, 96);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(171, 20);
             this.txtNome.TabIndex = 2;
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(251, 70);
+            this.txtCod.Location = new System.Drawing.Point(154, 70);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(61, 20);
             this.txtCod.TabIndex = 1;
@@ -153,7 +153,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEmail.Location = new System.Drawing.Point(160, 278);
+            this.lblEmail.Location = new System.Drawing.Point(351, 182);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(45, 13);
             this.lblEmail.TabIndex = 32;
@@ -163,7 +163,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTelefone.Location = new System.Drawing.Point(158, 135);
+            this.lblTelefone.Location = new System.Drawing.Point(351, 127);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(66, 13);
             this.lblTelefone.TabIndex = 31;
@@ -173,7 +173,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCidade.Location = new System.Drawing.Point(447, 203);
+            this.lblCidade.Location = new System.Drawing.Point(352, 156);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(50, 13);
             this.lblCidade.TabIndex = 30;
@@ -183,7 +183,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumero.Location = new System.Drawing.Point(159, 243);
+            this.lblNumero.Location = new System.Drawing.Point(63, 181);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(58, 13);
             this.lblNumero.TabIndex = 29;
@@ -193,7 +193,7 @@
             // 
             this.lblCep.AutoSize = true;
             this.lblCep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCep.Location = new System.Drawing.Point(159, 172);
+            this.lblCep.Location = new System.Drawing.Point(64, 132);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(31, 13);
             this.lblCep.TabIndex = 28;
@@ -203,7 +203,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEndereco.Location = new System.Drawing.Point(158, 207);
+            this.lblEndereco.Location = new System.Drawing.Point(64, 158);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(70, 13);
             this.lblEndereco.TabIndex = 27;
@@ -213,7 +213,7 @@
             // 
             this.lblCpf.AutoSize = true;
             this.lblCpf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCpf.Location = new System.Drawing.Point(450, 102);
+            this.lblCpf.Location = new System.Drawing.Point(351, 99);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(30, 13);
             this.lblCpf.TabIndex = 26;
@@ -223,7 +223,7 @@
             // 
             this.lblCod.AutoSize = true;
             this.lblCod.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCod.Location = new System.Drawing.Point(160, 74);
+            this.lblCod.Location = new System.Drawing.Point(65, 74);
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(52, 13);
             this.lblCod.TabIndex = 25;
@@ -233,7 +233,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNome.Location = new System.Drawing.Point(158, 103);
+            this.lblNome.Location = new System.Drawing.Point(63, 103);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(42, 13);
             this.lblNome.TabIndex = 24;
@@ -296,23 +296,19 @@
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(249, 165);
+            this.txtCep.Location = new System.Drawing.Point(154, 124);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(171, 20);
             this.txtCep.TabIndex = 5;
             this.txtCep.Leave += new System.EventHandler(this.cep_Leave);
             // 
-            // panel3
+            // dataGridView1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel3.Controls.Add(this.btnEditar);
-            this.panel3.Controls.Add(this.btnCadastrar);
-            this.panel3.Controls.Add(this.btnBuscar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(130, 328);
-            this.panel3.TabIndex = 42;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(66, 259);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(554, 116);
+            this.dataGridView1.TabIndex = 33;
             // 
             // frmCliente
             // 
@@ -320,8 +316,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(686, 386);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtCep);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtNum);
@@ -349,7 +348,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,6 +381,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label lblFechar;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
