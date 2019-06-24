@@ -19,22 +19,38 @@ namespace PetShop
             InitializeComponent();
         }
 
+        Atendimento atendimento = new Atendimento();
+        AtendimentoBO atendimentoBO = new AtendimentoBO();
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Atendimento atendimento = new Atendimento();
-            AtendimentoBO atendimentoBO = new AtendimentoBO();
 
-            atendimento.CodAtendimento = Convert.ToInt16(txtCodAtendimento.Text);
-            atendimento.Servico.CodServico = Convert.ToInt16(txtCodServico.Text);
-            atendimento.Pet.CodPet = Convert.ToInt16(txtCodPet.Text);
-            atendimento.Funcionario.Codigo = Convert.ToInt16(txtCodFunc.Text);
-          //  atendimento.DataHora = Convert.ToDateTime(txtDataHora.Text);
-            atendimento.Situacao = txtSituacao.Text;
 
-            atendimentoBO.GravarAtendimento(atendimento);
+            try
+            {
+                atendimento.Servico.CodServico = Convert.ToInt16(txtCodServico.Text);
+                atendimento.Pet.CodPet = Convert.ToInt16(txtCodPet.Text);
+                atendimento.Funcionario.Codigo = Convert.ToInt16(txtCodFunc.Text);
+                atendimento.DataHora = Convert.ToDateTime(MtxtDataHora.Text);
+                atendimento.Situacao = comboBox1.Text;
+
+                atendimentoBO.GravarAtendimento(atendimento);
+
+                MessageBox.Show("Atendimento Cadastrado com Sucesso!");
+            }
+            catch
+            {
+                MessageBox.Show("Insira os dados Corretamente", "ATENÇÃO!!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
         }
 
         private void lblFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblFechar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

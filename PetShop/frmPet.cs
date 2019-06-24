@@ -103,14 +103,14 @@ namespace PetShop
 
             pet.CodPet= Convert.ToInt16(txtCodP.Text);
             pet.Cliente.Codigo = Convert.ToInt16(txtCod.Text);
-            pet.Nome = txtNome.Text;
-            pet.Raca = txtRaca.Text;
-            pet.Porte = txtPorte.Text;
-            pet.Sexo = txtSexo.Text;
-            pet.Cor = txtCor.Text;
-            pet.Especie = txtEspecie.Text;
-           
-                petBO.Editar(pet);
+            pet.Nome = txtNome.Text.ToUpper();
+            pet.Raca = txtRaca.Text.ToUpper();
+            pet.Porte = txtPorte.Text.ToUpper();
+            pet.Sexo = txtSexo.Text.ToUpper();
+            pet.Cor = txtCor.Text.ToUpper();
+            pet.Especie = txtEspecie.Text.ToUpper();
+
+            petBO.Editar(pet);
                 MessageBox.Show("Dados atualizados com sucesso!!");
            
 

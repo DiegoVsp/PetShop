@@ -24,27 +24,34 @@ namespace PetShop
         {
             Cliente cliente = new Cliente();
             ClienteBO clienteBO = new ClienteBO();
+            try
+            {
+                cliente.Nome = txtNome.Text;
+                cliente.Cpf = txtCpf.Text;
+                cliente.Cep = txtCep.Text;
+                cliente.Endereco = txtEnd.Text;
+                cliente.Cidade = txtCidade.Text;
+                cliente.Numero = txtNum.Text;
+                cliente.Telefone = txtTelefone.Text;
+                cliente.Email = txtEmail.Text;
 
-            cliente.Nome = txtNome.Text;
-            cliente.Cpf = Convert.ToInt32(txtCpf.Text);
-            cliente.Cep = txtCep.Text;
-            cliente.Endereco = txtEnd.Text;
-            cliente.Cidade = txtCidade.Text;
-            cliente.Numero = txtNum.Text;
-            cliente.Telefone = txtTelefone.Text;
-            cliente.Email = txtEmail.Text;
+                clienteBO.GravarCliente(cliente);
+                MessageBox.Show("Cliente Cadastrado com sucesso!!!");
 
-            clienteBO.GravarCliente(cliente);
-            MessageBox.Show("Cliente Cadastrado com sucesso!!!");
-
-            txtNome.Clear();
-            txtCpf.Clear();
-            txtCep.Clear();
-            txtEnd.Clear();
-            txtCidade.Clear();
-            txtNum.Clear();
-            txtTelefone.Clear();
-            txtEmail.Clear();
+                txtNome.Clear();
+                txtCpf.Clear();
+                txtCep.Clear();
+                txtEnd.Clear();
+                txtCidade.Clear();
+                txtNum.Clear();
+                txtTelefone.Clear();
+                txtEmail.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Insira corretamente os dados!!!","ATENÇÃO",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+            
 
         }
 
@@ -95,7 +102,7 @@ namespace PetShop
 
             cliente.Codigo = Convert.ToInt16(txtCod.Text);
             cliente.Nome = txtNome.Text;
-            cliente.Cpf = Convert.ToInt32(txtCpf.Text);
+            cliente.Cpf = txtCpf.Text;
             cliente.Cep = txtCep.Text;
             cliente.Endereco = txtEnd.Text;
             cliente.Cidade = txtCidade.Text;

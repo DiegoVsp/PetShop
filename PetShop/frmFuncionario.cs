@@ -31,7 +31,7 @@ namespace PetShop
             FuncionarioBO funcionarioBO = new FuncionarioBO();
 
             funcionario.Nome = txtNome.Text;
-            funcionario.Cpf = Convert.ToInt32(txtCpf.Text);
+            funcionario.Cpf = txtCpf.Text;
             funcionario.Cep = txtCep.Text;
             funcionario.Endereco = txtEnd.Text;
             funcionario.Cidade = txtCidade.Text;
@@ -144,7 +144,7 @@ namespace PetShop
 
             funcionario.Codigo = Convert.ToInt16(txtCod.Text);
             funcionario.Nome = txtNome.Text;
-            funcionario.Cpf = Convert.ToInt32(txtCpf.Text);
+            funcionario.Cpf = txtCpf.Text;
             funcionario.Cep = txtCep.Text;
             funcionario.Endereco = txtEnd.Text;
             funcionario.Cidade = txtCidade.Text;
@@ -167,6 +167,26 @@ namespace PetShop
             txtSalario.Clear();
             txtCartTrab.Clear();
 
+        }
+
+        private void btnCalcularSalário_Click(object sender, EventArgs e)
+        {
+            Funcionario funcionario = new Funcionario();
+            FuncionarioBO funcionarioBO = new FuncionarioBO();
+
+            funcionario.Codigo = Convert.ToInt16(txtCod.Text);
+            funcionario.Salario = Convert.ToDecimal(txtSalario.Text);
+            funcionarioBO.Calcular(funcionario);
+
+            txtSalario.Text = Convert.ToString(funcionario.Salario);
+        }
+
+        private void lblFechar_Click_1(object sender, EventArgs e)
+        {
+
+            {
+                this.Close();
+            }
         }
     }
 }

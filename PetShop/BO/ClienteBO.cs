@@ -13,7 +13,7 @@ namespace PetShop.BO
         public void GravarCliente(Cliente cliente)
         {
             ClienteDAO clienteDAO = new ClienteDAO();
-            if((cliente.Nome != "")&&(cliente.Cpf != 0)&&(cliente.Telefone != ""))
+            if((cliente.Nome != "")&&(cliente.Cpf != "")&&(cliente.Telefone != ""))
             {
                 clienteDAO.Insert(cliente);
             }

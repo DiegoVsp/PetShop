@@ -89,7 +89,7 @@ namespace PetShop.DAO
                 cliente.Codigo = (int)dr["codcli"];
                 cliente.Nome = (string)dr["nome"];
                 cliente.Telefone = (string)dr["telefone"];
-                cliente.Cpf = (long)dr["cpf"];
+                cliente.Cpf = (string)dr["cpf"];
                 cliente.Cep = (string)dr["cep"];
                 cliente.Endereco = (string)dr["endereco"];
                 cliente.Cidade = (string)dr["cidade"];
@@ -102,7 +102,7 @@ namespace PetShop.DAO
             {
                 cliente.Codigo = 0;
                 cliente.Nome = "";
-                cliente.Cpf = 0;
+                cliente.Cpf = "";
                 cliente.Cep = "";
                 cliente.Endereco = "";
                 cliente.Cidade = "";

@@ -19,5 +19,29 @@ namespace PetShop.BO
                 servicoDAO.Insert(servico);
             }
         }
+
+        //Update
+        public void Editar(Servico servico)
+        {
+            ServicosDAO servicosDAO = new ServicosDAO();
+            if (servico.Tipo != "")
+            {
+                servicosDAO.Update(servico);
+            }
+        }
+
+        public void Buscar(Servico servico)
+        {
+            ServicosDAO servicosDAO = new ServicosDAO();
+
+            if(servico.CodServico > 0)
+            {
+                var servicoTemp = servicosDAO.BuscarPorId(servico.CodServico);
+
+                servico.Tipo = servicoTemp.Tipo;
+                servico.Valor = servicoTemp.Valor;
+                servico.Porte = servicoTemp.Porte;
+            }
+        }
     }
 }

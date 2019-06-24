@@ -10,20 +10,18 @@ namespace PetShop.BO
 {
     public class AtendimentoBO
     {
+        AtendimentoDAO atendimentoDAO = new AtendimentoDAO(); // <<----
+
         public void GravarAtendimento(Atendimento atendimento)
         {
+            // AtendimentoDAO atendimentoDAO = new AtendimentoDAO() - 
 
-            AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
-
-            //if ((atendimento.Pet != null) && (atendimento.Servico != null) && (atendimento.Funcionario != null))
-           // {
-                if ((atendimento.CodAtendimento != 0))
-                {
+            if ((atendimento.Pet.CodPet != 0) && (atendimento.Servico.CodServico != 0) && (atendimento.Funcionario.Codigo != 0))
+            {
                 atendimentoDAO.Insert(atendimento);
-                }
-           //     else  { }
-           // }
-
+            }
+            //select f.codfunc,(f.salario*0.1*(select count(*) from atendimento a where a.codfunc = f.codfunc)
+//            +f.salario) as comissao from funcionario f where f.codfunc =1;
         }
     }
 }

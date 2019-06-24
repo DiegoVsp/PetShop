@@ -13,7 +13,7 @@ namespace PetShop.BO
         public void GravarFuncionario(Funcionario funcionario)
         {
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-            if((funcionario.Nome != "")&&(funcionario.Cpf != 0) && (funcionario.Telefone != "")&&(funcionario.Cep != null))
+            if((funcionario.Nome != "")&&(funcionario.Cpf != "") && (funcionario.Telefone != "")&&(funcionario.Cep != null))
             {
                 funcionarioDAO.Insert(funcionario);
             }
@@ -45,6 +45,15 @@ namespace PetShop.BO
             if (funcionario.Nome != "")
             {
                 funcionarioDAO.Update(funcionario);
+            }
+        }
+
+        public void Calcular(Funcionario funcionario)
+        {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            if (funcionario.Salario > 0)
+            {
+                funcionarioDAO.CalcSalario(funcionario);
             }
         }
     }

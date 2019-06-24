@@ -24,10 +24,13 @@ namespace PetShop
             this.Close();
         }
 
+        // instanciado em todos os botões
+        Servico servico = new Servico();
+        ServicosBO servicoBO = new ServicosBO();
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Servico servico = new Servico();
-            ServicosBO servicoBO = new ServicosBO();
+
             try
             {
                 servico.Tipo = txtTipo.Text.ToUpper();
@@ -42,6 +45,43 @@ namespace PetShop
                 MessageBox.Show("Digite os dados corretamente", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                servico.CodServico = Convert.ToInt16(txtCodServico.Text);
+                servico.Porte = txtPorte.Text.ToUpper();
+                servico.Tipo = txtTipo.Text.ToUpper();
+                servico.Valor = Convert.ToSingle(txtValor.Text);
+
+                servicoBO.Editar(servico);
+                MessageBox.Show("Update Realizado Com sucesso!");
+            }
+            catch
+            {
+                MessageBox.Show("Preencha corretamente os campos necessarios", "Atenção!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            servico.CodServico = Convert.ToInt16(txtCodServico.Text);
+            servicoBO.Buscar(servico);
+            
+            if(servico.Tipo=="")
+            {
+                MessageBox.Show("Servico não cadastrado!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                txtPorte.Text = servico.Porte;
+                txtTipo.Text = servico.Tipo;
+                txtValor.Text = Convert.ToString(servico.Valor.ToString("C"));
+            }
         }
     }
 }

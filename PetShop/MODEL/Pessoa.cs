@@ -10,7 +10,7 @@ namespace PetShop.MODEL
     {
         private int codigo;
         private string nome;
-        private long cpf;
+        private string cpf;
         private string endereco;
         private string cep;
         private string numero;
@@ -19,7 +19,7 @@ namespace PetShop.MODEL
 
         public int Codigo { get => codigo; set => codigo = value; }
         public string Nome { get => nome; set => nome = value; }
-        public long Cpf { get => cpf; set => cpf = value; }
+        public string Cpf { get => cpf; set => cpf = value; }
         public string Endereco { get => endereco; set => endereco = value; }
         public string Cep { get => cep; set => cep = value; }
         public string Numero { get => numero; set => numero = value; }

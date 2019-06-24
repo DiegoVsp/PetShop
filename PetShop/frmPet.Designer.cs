@@ -59,42 +59,42 @@
             this.txtEspecie.Location = new System.Drawing.Point(354, 97);
             this.txtEspecie.Name = "txtEspecie";
             this.txtEspecie.Size = new System.Drawing.Size(171, 22);
-            this.txtEspecie.TabIndex = 78;
+            this.txtEspecie.TabIndex = 8;
             // 
             // txtCor
             // 
             this.txtCor.Location = new System.Drawing.Point(104, 99);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(158, 22);
-            this.txtCor.TabIndex = 77;
+            this.txtCor.TabIndex = 7;
             // 
             // txtPorte
             // 
             this.txtPorte.Location = new System.Drawing.Point(104, 73);
             this.txtPorte.Name = "txtPorte";
             this.txtPorte.Size = new System.Drawing.Size(158, 22);
-            this.txtPorte.TabIndex = 75;
+            this.txtPorte.TabIndex = 5;
             // 
             // txtRaca
             // 
             this.txtRaca.Location = new System.Drawing.Point(354, 45);
             this.txtRaca.Name = "txtRaca";
             this.txtRaca.Size = new System.Drawing.Size(171, 22);
-            this.txtRaca.TabIndex = 74;
+            this.txtRaca.TabIndex = 4;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(104, 47);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(158, 22);
-            this.txtNome.TabIndex = 73;
+            this.txtNome.TabIndex = 3;
             // 
             // txtCod
             // 
             this.txtCod.Location = new System.Drawing.Point(354, 21);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(41, 22);
-            this.txtCod.TabIndex = 72;
+            this.txtCod.TabIndex = 2;
             // 
             // lblEspecie
             // 
@@ -225,7 +225,7 @@
             this.txtCodP.Location = new System.Drawing.Point(104, 21);
             this.txtCodP.Name = "txtCodP";
             this.txtCodP.Size = new System.Drawing.Size(41, 22);
-            this.txtCodP.TabIndex = 79;
+            this.txtCodP.TabIndex = 1;
             // 
             // grpCadastroPets
             // 
@@ -247,6 +247,7 @@
             this.grpCadastroPets.Controls.Add(this.txtCod);
             this.grpCadastroPets.Controls.Add(this.lblEspecie);
             this.grpCadastroPets.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpCadastroPets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpCadastroPets.Location = new System.Drawing.Point(12, 23);
             this.grpCadastroPets.Name = "grpCadastroPets";
             this.grpCadastroPets.Size = new System.Drawing.Size(555, 140);
@@ -260,7 +261,7 @@
             this.txtSexo.Location = new System.Drawing.Point(354, 71);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(171, 22);
-            this.txtSexo.TabIndex = 76;
+            this.txtSexo.TabIndex = 6;
             // 
             // dataGridView1
             // 

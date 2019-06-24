@@ -62,7 +62,7 @@ namespace PetShop.DAO
                 
                 funcionario.Nome = (string)dr["nome"];
                 funcionario.Telefone = (string)dr["telefone"];
-                funcionario.Cpf = (long)dr["cpf"];
+                funcionario.Cpf = (string)dr["cpf"];
                 funcionario.Cep = (string)dr["cep"];
                 funcionario.Endereco = (string)dr["endereco"];
                 funcionario.Cidade = (string)dr["cidade"];
@@ -74,7 +74,7 @@ namespace PetShop.DAO
             {
                 funcionario.Codigo = 0;
                 funcionario.Nome = "";
-                funcionario.Cpf = 0;
+                funcionario.Cpf = "";
                 funcionario.Cep = "";
                 funcionario.Endereco = "";
                 funcionario.Cidade = "";
@@ -114,6 +114,28 @@ namespace PetShop.DAO
                 throw new Exception("Não foi possivel realizar o UPDATE" + ex.Message);
             }
 
+        }
+        
+        public void CalcSalario(Funcionario funcionario)
+        {
+            
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "select f.codfunc,round(f.salario * 0.1 * (select count(*) from atendimento a where a.codfunc = f.codfunc) + f.salario,2) as comissao from funcionario f where f.codfunc = @codfunc";
+
+            comando.Parameters.AddWithValue("codfunc", funcionario.Codigo );
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+
+                funcionario.Salario = (decimal)dr["comissao"];
+            }
+           
         }
 
     }
