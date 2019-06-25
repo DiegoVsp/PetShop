@@ -12,5 +12,9 @@ namespace PetShop.MODEL
 
         public string Email { get => email; set => email = value; }
 
+        public override string ToString()
+        {
+            return Codigo.ToString();
+        }
     }
 }

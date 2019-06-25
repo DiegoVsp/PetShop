@@ -30,6 +30,11 @@ namespace PetShop.MODEL
         public string Sexo { get => sexo; set => sexo = value; }
         public string Cor { get => cor; set => cor = value; }
         public string Especie { get => especie; set => especie = value; }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
     }
 
 }

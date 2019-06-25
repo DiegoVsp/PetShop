@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using PetShop.MODEL;
 using PetShop.BO;
 
+
 namespace PetShop
 {
     public partial class frmAtendimento : Form
@@ -53,6 +54,44 @@ namespace PetShop
         private void lblFechar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnBuscarAtendimento_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                atendimento.CodAtendimento = Convert.ToInt16(txtCodAtendimento.Text);
+                dataGridView1.DataSource = atendimentoBO.BuscarPorAtendimento(atendimento);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha corretamente!!");
+            }
+
+        }
+
+        private void frmAtendimento_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btnBuscarPorPeriodo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                atendimento.DataHora = Convert.ToDateTime(MtxtDataHora.Text);
+                dataGridView1.DataSource = atendimentoBO.BuscarPorPeriodo(atendimento);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha corretamente!!");
+            }
         }
     }
 }

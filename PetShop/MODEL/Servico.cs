@@ -18,5 +18,10 @@ namespace PetShop.MODEL
         public string Porte { get => porte; set => porte = value; }
         public float Valor { get => valor; set => valor = value; }
 
+
+        public override string ToString()
+        {
+            return this.Tipo;
+        }
     }
 }

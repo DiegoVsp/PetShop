@@ -14,7 +14,11 @@ namespace PetShop.MODEL
 
         public string CartTrab { get => cartTrab; set => cartTrab = value; }
         public decimal Salario { get => salario; set => salario = value; }
-        
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
 
     }
 }

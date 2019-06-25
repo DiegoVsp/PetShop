@@ -188,5 +188,36 @@ namespace PetShop
                 this.Close();
             }
         }
+
+        private void btnCadastrar_Click_1(object sender, EventArgs e)
+        {
+            Funcionario funcionario = new Funcionario();
+            FuncionarioBO funcionarioBO = new FuncionarioBO();
+
+            funcionario.Nome = txtNome.Text;
+            funcionario.Cpf = txtCpf.Text;
+            funcionario.Cep = txtCep.Text;
+            funcionario.Endereco = txtEnd.Text;
+            funcionario.Cidade = txtCidade.Text;
+            funcionario.Numero = txtNum.Text;
+            funcionario.Telefone = txtTelefone.Text;
+            funcionario.CartTrab = txtCartTrab.Text;
+            funcionario.Salario = Convert.ToDecimal(txtSalario.Text);
+
+            funcionarioBO.GravarFuncionario(funcionario);
+            MessageBox.Show("Funcionário Cadastrado com sucesso!!!");
+
+
+            txtCod.Clear();
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtCep.Clear();
+            txtEnd.Clear();
+            txtCidade.Clear();
+            txtNum.Clear();
+            txtTelefone.Clear();
+            txtSalario.Clear();
+            txtCartTrab.Clear();
+        }
     }
 }

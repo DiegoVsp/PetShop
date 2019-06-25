@@ -23,5 +23,32 @@ namespace PetShop.BO
             //select f.codfunc,(f.salario*0.1*(select count(*) from atendimento a where a.codfunc = f.codfunc)
 //            +f.salario) as comissao from funcionario f where f.codfunc =1;
         }
+
+        public IList<Atendimento> BuscarPorAtendimento(Atendimento atendimento)
+        {
+            if(atendimento.CodAtendimento != 0)
+            {
+                IList<Atendimento> atendTemp = atendimentoDAO.BuscarPorAtendimento(atendimento.CodAtendimento);
+                return atendTemp;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        public IList<Atendimento> BuscarPorPeriodo(Atendimento atendimento)
+        {
+            if (atendimento.DataHora==null)
+                {
+                IList<Atendimento> atendTemp = atendimentoDAO.BuscarPorAtendimento(atendimento.CodAtendimento);
+                return atendTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

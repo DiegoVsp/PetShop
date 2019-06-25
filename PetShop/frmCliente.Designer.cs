@@ -49,9 +49,9 @@
             this.lblFechar = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.grpCliente = new System.Windows.Forms.GroupBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtCep = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpCliente.SuspendLayout();
             this.SuspendLayout();
@@ -248,23 +248,9 @@
             this.txtTelefone.Size = new System.Drawing.Size(82, 20);
             this.txtTelefone.TabIndex = 0;
             // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(354, 40);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(154, 20);
-            this.txtCpf.TabIndex = 3;
-            // 
-            // txtCep
-            // 
-            this.txtCep.Location = new System.Drawing.Point(98, 72);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(171, 20);
-            this.txtCep.TabIndex = 4;
-            this.txtCep.Leave += new System.EventHandler(this.cep_Leave);
-            // 
             // grpCliente
             // 
+            this.grpCliente.Controls.Add(this.txtCpf);
             this.grpCliente.Controls.Add(this.txtTelefone);
             this.grpCliente.Controls.Add(this.lblNome);
             this.grpCliente.Controls.Add(this.lblCod);
@@ -282,7 +268,6 @@
             this.grpCliente.Controls.Add(this.txtCod);
             this.grpCliente.Controls.Add(this.txtEnd);
             this.grpCliente.Controls.Add(this.txtNome);
-            this.grpCliente.Controls.Add(this.txtCpf);
             this.grpCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpCliente.Location = new System.Drawing.Point(12, 12);
             this.grpCliente.Name = "grpCliente";
@@ -290,6 +275,22 @@
             this.grpCliente.TabIndex = 44;
             this.grpCliente.TabStop = false;
             this.grpCliente.Text = "CADASTRO CLIENTE";
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(354, 39);
+            this.txtCpf.Mask = "000-000-000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(89, 20);
+            this.txtCpf.TabIndex = 33;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(98, 72);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(171, 20);
+            this.txtCep.TabIndex = 4;
+            this.txtCep.Leave += new System.EventHandler(this.cep_Leave);
             // 
             // frmCliente
             // 
@@ -338,8 +339,8 @@
         private System.Windows.Forms.Label lblFechar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.GroupBox grpCliente;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.TextBox txtCep;
     }
 }

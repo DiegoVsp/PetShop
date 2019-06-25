@@ -37,8 +37,6 @@
             this.txtNum = new System.Windows.Forms.TextBox();
             this.txtEnd = new System.Windows.Forms.TextBox();
             this.txtCep = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
@@ -51,10 +49,12 @@
             this.btnCalcularSalário = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grpFuncionario = new System.Windows.Forms.GroupBox();
             this.lblFechar = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -128,20 +128,6 @@
             this.txtCep.Size = new System.Drawing.Size(171, 20);
             this.txtCep.TabIndex = 5;
             this.txtCep.Leave += new System.EventHandler(this.cep_leave);
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(127, 75);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(171, 20);
-            this.txtTelefone.TabIndex = 4;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(449, 46);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(117, 20);
-            this.txtCpf.TabIndex = 3;
             // 
             // txtCod
             // 
@@ -236,7 +222,7 @@
             this.btnCalcularSalário.Location = new System.Drawing.Point(539, 223);
             this.btnCalcularSalário.Name = "btnCalcularSalário";
             this.btnCalcularSalário.Size = new System.Drawing.Size(110, 38);
-            this.btnCalcularSalário.TabIndex = 22;
+            this.btnCalcularSalário.TabIndex = 14;
             this.btnCalcularSalário.Text = "CALCULAR SALÁRIO";
             this.btnCalcularSalário.UseVisualStyleBackColor = true;
             this.btnCalcularSalário.Click += new System.EventHandler(this.btnCalcularSalário_Click);
@@ -247,7 +233,7 @@
             this.btnEditar.Location = new System.Drawing.Point(214, 238);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(110, 23);
-            this.btnEditar.TabIndex = 20;
+            this.btnEditar.TabIndex = 12;
             this.btnEditar.Text = "UPDATE";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -258,22 +244,10 @@
             this.btnBuscar.Location = new System.Drawing.Point(387, 238);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 23);
-            this.btnBuscar.TabIndex = 21;
+            this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(57, 238);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(112, 23);
-            this.btnCadastrar.TabIndex = 19;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            this.btnCadastrar.Leave += new System.EventHandler(this.cep_leave);
             // 
             // dataGridView1
             // 
@@ -285,6 +259,8 @@
             // 
             // grpFuncionario
             // 
+            this.grpFuncionario.Controls.Add(this.txtCpf);
+            this.grpFuncionario.Controls.Add(this.txtTelefone);
             this.grpFuncionario.Controls.Add(this.txtCod);
             this.grpFuncionario.Controls.Add(this.lblNome);
             this.grpFuncionario.Controls.Add(this.lblCod);
@@ -298,9 +274,7 @@
             this.grpFuncionario.Controls.Add(this.lblCidade);
             this.grpFuncionario.Controls.Add(this.lblTelefone);
             this.grpFuncionario.Controls.Add(this.txtCartTrab);
-            this.grpFuncionario.Controls.Add(this.txtCpf);
             this.grpFuncionario.Controls.Add(this.lblCartTrab);
-            this.grpFuncionario.Controls.Add(this.txtTelefone);
             this.grpFuncionario.Controls.Add(this.txtCidade);
             this.grpFuncionario.Controls.Add(this.txtCep);
             this.grpFuncionario.Controls.Add(this.txtNum);
@@ -324,19 +298,46 @@
             this.lblFechar.Text = "X";
             this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click_1);
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(55, 238);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(101, 22);
+            this.btnCadastrar.TabIndex = 11;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_1);
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(127, 80);
+            this.txtTelefone.Mask = "(99) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 66;
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(449, 42);
+            this.txtCpf.Mask = "000-000-000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(100, 20);
+            this.txtCpf.TabIndex = 67;
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(686, 386);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblFechar);
             this.Controls.Add(this.grpFuncionario);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCalcularSalário);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -360,8 +361,6 @@
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.TextBox txtEnd;
         private System.Windows.Forms.TextBox txtCep;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblCidade;
@@ -374,9 +373,11 @@
         private System.Windows.Forms.Button btnCalcularSalário;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox grpFuncionario;
         private System.Windows.Forms.Label lblFechar;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

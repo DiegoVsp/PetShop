@@ -40,7 +40,7 @@ namespace PetShop
 
                 txtNome.Clear();
                 txtCpf.Clear();
-                txtCep.Clear();
+                txtCpf.Clear();
                 txtEnd.Clear();
                 txtCidade.Clear();
                 txtNum.Clear();
