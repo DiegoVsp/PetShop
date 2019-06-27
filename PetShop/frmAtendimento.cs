@@ -63,11 +63,13 @@ namespace PetShop
             {
                 atendimento.CodAtendimento = Convert.ToInt16(txtCodAtendimento.Text);
                 dataGridView1.DataSource = atendimentoBO.BuscarPorAtendimento(atendimento);
+                txtCodAtendimento.Clear();
             }
             catch
             {
                 MessageBox.Show("Preencha corretamente!!");
             }
+            
 
         }
 
@@ -83,15 +85,63 @@ namespace PetShop
 
         private void btnBuscarPorPeriodo_Click(object sender, EventArgs e)
         {
+           
+           
+        }
+
+        private void BtnBuscarFuncionario_Click(object sender, EventArgs e)
+        {
+            Atendimento atendimento = new Atendimento();
+            AtendimentoBO atendimentoBO = new AtendimentoBO();
+
+
+            try
+            { 
+                atendimento.Funcionario.Codigo = Convert.ToInt16(txtCodFunc.Text);
+
+                dataGridView1.DataSource = atendimentoBO.BuscaPorFuncionario(atendimento);
+                txtCodFunc.Clear();
+            }
+
+            catch
+            {
+                MessageBox.Show("Preencha  corretamente as informações!!");
+            }
+
+            
+
+
+
+        }
+
+        private void BtnBuscarPet_Click(object sender, EventArgs e)
+        {
+            Atendimento atendimento = new Atendimento();
+            AtendimentoBO atendimentoBO = new AtendimentoBO();
+
+
             try
             {
-                atendimento.DataHora = Convert.ToDateTime(MtxtDataHora.Text);
-                dataGridView1.DataSource = atendimentoBO.BuscarPorPeriodo(atendimento);
+
+
+                atendimento.Pet.CodPet = Convert.ToInt16(txtCodPet.Text);
+
+                dataGridView1.DataSource = atendimentoBO.BuscaPet(atendimento);
+
+                txtCodPet.Clear();
+
+
             }
             catch
             {
-                MessageBox.Show("Preencha corretamente!!");
+                MessageBox.Show("Preencha  corretamente as informações!!");
             }
+            
+        }
+
+        private void DataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
         }
     }
 }

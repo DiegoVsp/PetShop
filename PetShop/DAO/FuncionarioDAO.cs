@@ -86,6 +86,44 @@ namespace PetShop.DAO
             return funcionario;
         }
 
+        public IList<Funcionario> BuscarPorNomeF(string nome)
+        {
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "select * from funcionario where nome like @nome";
+
+            comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            IList<Funcionario> funcionarios = new List<Funcionario>();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Funcionario funcionario = new Funcionario();
+
+                    funcionario.Codigo = (int)dr["CodFunc"];
+                    funcionario.Nome = (string)dr["Nome"];
+                    funcionario.Cpf = (string)dr["Cpf"];
+                    funcionario.Cep = (string)dr["Cep"];
+                    funcionario.Endereco = (string)dr["Endereco"];
+                    funcionario.Cidade = (string)dr["Cidade"];
+                    funcionario.Numero = (string)dr["Numero"];
+                    funcionario.Telefone = (string)dr["Telefone"];
+                    funcionario.CartTrab = (string)dr["CartTrab"];
+                    funcionario.Salario = (decimal)dr["Salario"];
+
+                    funcionarios.Add(funcionario);
+                }
+            }
+            else
+            {
+                funcionarios = null;
+            }
+            return funcionarios;
+        }
 
         public void Update(Funcionario funcionario)
         {

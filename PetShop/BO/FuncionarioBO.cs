@@ -39,6 +39,20 @@ namespace PetShop.BO
             }
         }
 
+        public IList<Funcionario> BuscarN(Funcionario funcionario)
+        {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            if (funcionario.Nome != "")
+            {
+                IList<Funcionario> funcionarioTemp = funcionarioDAO.BuscarPorNomeF(funcionario.Nome);
+                return funcionarioTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public void Editar(Funcionario funcionario)
         {
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();

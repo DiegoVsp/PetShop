@@ -33,8 +33,9 @@ namespace PetShop.MODEL
 
         public override string ToString()
         {
-            return this.Nome;
+            return CodPet.ToString();
         }
+
     }
 
 }

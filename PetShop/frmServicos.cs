@@ -83,5 +83,20 @@ namespace PetShop
                 txtValor.Text = Convert.ToString(servico.Valor.ToString("C"));
             }
         }
+
+        private void BtnBuscarTipo_Click(object sender, EventArgs e)
+        {
+            Servico servico = new Servico();
+            ServicosBO servicosBO = new ServicosBO();
+            try
+            {
+                servico.Tipo = txtTipo.Text;
+                dataGridView1.DataSource = servicosBO.BuscarTipo(servico);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha os dados Corretamente!!");
+            }
+        }
     }
 }

@@ -30,14 +30,14 @@ namespace PetShop
             Funcionario funcionario = new Funcionario();
             FuncionarioBO funcionarioBO = new FuncionarioBO();
 
-            funcionario.Nome = txtNome.Text;
-            funcionario.Cpf = txtCpf.Text;
-            funcionario.Cep = txtCep.Text;
-            funcionario.Endereco = txtEnd.Text;
-            funcionario.Cidade = txtCidade.Text;
-            funcionario.Numero = txtNum.Text;
-            funcionario.Telefone = txtTelefone.Text;
-            funcionario.CartTrab = txtCartTrab.Text;
+            funcionario.Nome = txtNome.Text.ToUpper();
+            funcionario.Cpf = txtCpf.Text.ToUpper();
+            funcionario.Cep = txtCep.Text.ToUpper();
+            funcionario.Endereco = txtEnd.Text.ToUpper();
+            funcionario.Cidade = txtCidade.Text.ToUpper();
+            funcionario.Numero = txtNum.Text.ToUpper();
+            funcionario.Telefone = txtTelefone.Text.ToUpper();
+            funcionario.CartTrab = txtCartTrab.Text.ToUpper();
             funcionario.Salario = Convert.ToDecimal(txtSalario.Text);
 
             funcionarioBO.GravarFuncionario(funcionario);
@@ -218,6 +218,21 @@ namespace PetShop
             txtTelefone.Clear();
             txtSalario.Clear();
             txtCartTrab.Clear();
+        }
+
+        private void BtnBuscarNome_Click(object sender, EventArgs e)
+        {
+            Funcionario funcionario = new Funcionario();
+            FuncionarioBO funcionarioBO = new FuncionarioBO();
+            try
+            {
+                funcionario.Nome = txtNome.Text;
+                dataGridView1.DataSource = funcionarioBO.BuscarN(funcionario);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha os dados Corretamente!!");
+            }
         }
     }
 }

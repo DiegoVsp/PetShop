@@ -50,6 +50,7 @@
             this.grpCadastroPets = new System.Windows.Forms.GroupBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBuscarNome = new System.Windows.Forms.Button();
             this.grpCadastroPets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -170,11 +171,11 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(232, 179);
+            this.btnBuscar.Location = new System.Drawing.Point(164, 179);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 23);
             this.btnBuscar.TabIndex = 21;
-            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Text = "BUSCAR ID";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -271,12 +272,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(555, 154);
             this.dataGridView1.TabIndex = 81;
             // 
+            // btnBuscarNome
+            // 
+            this.btnBuscarNome.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarNome.Location = new System.Drawing.Point(306, 179);
+            this.btnBuscarNome.Name = "btnBuscarNome";
+            this.btnBuscarNome.Size = new System.Drawing.Size(101, 23);
+            this.btnBuscarNome.TabIndex = 82;
+            this.btnBuscarNome.Text = "BUSCAR NOME";
+            this.btnBuscarNome.UseVisualStyleBackColor = true;
+            this.btnBuscarNome.Click += new System.EventHandler(this.BtnBuscarNome_Click);
+            // 
             // frmPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(595, 386);
+            this.Controls.Add(this.btnBuscarNome);
             this.Controls.Add(this.lblFechar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEditar);
@@ -319,5 +332,6 @@
         private System.Windows.Forms.Label lblFechar;
         private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnBuscarNome;
     }
 }

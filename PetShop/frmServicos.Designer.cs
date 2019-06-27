@@ -42,6 +42,7 @@
             this.lblValor = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscarTipo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,9 +50,9 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(240, 160);
+            this.btnEditar.Location = new System.Drawing.Point(181, 175);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(101, 36);
+            this.btnEditar.Size = new System.Drawing.Size(101, 21);
             this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -60,20 +61,20 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(451, 160);
+            this.btnBuscar.Location = new System.Drawing.Point(451, 175);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(101, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(101, 21);
             this.btnBuscar.TabIndex = 21;
-            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Text = "BUSCAR ID";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(30, 160);
+            this.btnCadastrar.Location = new System.Drawing.Point(30, 175);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(101, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(101, 21);
             this.btnCadastrar.TabIndex = 19;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -184,12 +185,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CADASTRO SERVIÇOS";
             // 
+            // btnBuscarTipo
+            // 
+            this.btnBuscarTipo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarTipo.Location = new System.Drawing.Point(315, 175);
+            this.btnBuscarTipo.Name = "btnBuscarTipo";
+            this.btnBuscarTipo.Size = new System.Drawing.Size(101, 21);
+            this.btnBuscarTipo.TabIndex = 98;
+            this.btnBuscarTipo.Text = "BUSCAR TIPO";
+            this.btnBuscarTipo.UseVisualStyleBackColor = true;
+            this.btnBuscarTipo.Click += new System.EventHandler(this.BtnBuscarTipo_Click);
+            // 
             // frmServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(595, 386);
+            this.Controls.Add(this.btnBuscarTipo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblFechar);
             this.Controls.Add(this.dataGridView1);
@@ -223,5 +236,6 @@
         private System.Windows.Forms.Label lblFechar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnBuscarTipo;
     }
 }

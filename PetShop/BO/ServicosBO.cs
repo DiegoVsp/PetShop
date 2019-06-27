@@ -34,13 +34,27 @@ namespace PetShop.BO
         {
             ServicosDAO servicosDAO = new ServicosDAO();
 
-            if(servico.CodServico > 0)
+            if (servico.CodServico > 0)
             {
                 var servicoTemp = servicosDAO.BuscarPorId(servico.CodServico);
 
                 servico.Tipo = servicoTemp.Tipo;
                 servico.Valor = servicoTemp.Valor;
                 servico.Porte = servicoTemp.Porte;
+            }
+        }
+
+        public IList<Servico> BuscarTipo(Servico servico)
+        {
+            ServicosDAO servicoDAO = new ServicosDAO();
+            if (servico.Tipo != "")
+            {
+                IList<Servico> servicoTemp = servicoDAO.BuscarPorTipo(servico.Tipo);
+                return servicoTemp;
+            }
+            else
+            {
+                return null;
             }
         }
     }

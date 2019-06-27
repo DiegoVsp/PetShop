@@ -43,13 +43,13 @@
             this.lblCodAtendimento = new System.Windows.Forms.Label();
             this.lblDataHora = new System.Windows.Forms.Label();
             this.lblSituacao = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MtxtDataHora = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblFechar = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.MtxtDataHora = new System.Windows.Forms.MaskedTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscarPet
@@ -61,6 +61,7 @@
             this.btnBuscarPet.TabIndex = 25;
             this.btnBuscarPet.Text = "PET";
             this.btnBuscarPet.UseVisualStyleBackColor = true;
+            this.btnBuscarPet.Click += new System.EventHandler(this.BtnBuscarPet_Click);
             // 
             // btnBuscarAtendimento
             // 
@@ -93,6 +94,7 @@
             this.btnBuscarFuncionario.TabIndex = 22;
             this.btnBuscarFuncionario.Text = "FUNCIONÁRIO";
             this.btnBuscarFuncionario.UseVisualStyleBackColor = true;
+            this.btnBuscarFuncionario.Click += new System.EventHandler(this.BtnBuscarFuncionario_Click);
             // 
             // btnCadastrar
             // 
@@ -193,27 +195,6 @@
             this.lblSituacao.TabIndex = 89;
             this.lblSituacao.Text = "SITUAÇÃO:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 239);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(627, 135);
-            this.dataGridView1.TabIndex = 92;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // MtxtDataHora
-            // 
-            this.MtxtDataHora.Location = new System.Drawing.Point(169, 112);
-            this.MtxtDataHora.Mask = "00/00/0000 90:00";
-            this.MtxtDataHora.Name = "MtxtDataHora";
-            this.MtxtDataHora.Size = new System.Drawing.Size(97, 20);
-            this.MtxtDataHora.TabIndex = 5;
-            this.MtxtDataHora.ValidatingType = typeof(System.DateTime);
-            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
@@ -241,11 +222,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.MtxtDataHora);
             this.groupBox1.Controls.Add(this.txtCodServico);
             this.groupBox1.Controls.Add(this.lblCodAtendimento);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblCodPet);
-            this.groupBox1.Controls.Add(this.MtxtDataHora);
             this.groupBox1.Controls.Add(this.lblNomePet);
             this.groupBox1.Controls.Add(this.lblRaca);
             this.groupBox1.Controls.Add(this.txtCodAtendimento);
@@ -261,15 +242,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CADASTRO ATENDIMENTO";
             // 
+            // MtxtDataHora
+            // 
+            this.MtxtDataHora.Location = new System.Drawing.Point(169, 110);
+            this.MtxtDataHora.Mask = "00/00/0000 90:00";
+            this.MtxtDataHora.Name = "MtxtDataHora";
+            this.MtxtDataHora.Size = new System.Drawing.Size(100, 20);
+            this.MtxtDataHora.TabIndex = 90;
+            this.MtxtDataHora.ValidatingType = typeof(System.DateTime);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 225);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(627, 150);
+            this.dataGridView1.TabIndex = 95;
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataGridView1_DataError);
+            // 
             // frmAtendimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(686, 386);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblFechar);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBuscarPet);
             this.Controls.Add(this.btnBuscarAtendimento);
             this.Controls.Add(this.btnBuscarPorPeriodo);
@@ -280,9 +279,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atendimento";
             this.Load += new System.EventHandler(this.frmAtendimento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,10 +303,10 @@
         private System.Windows.Forms.Label lblCodAtendimento;
         private System.Windows.Forms.Label lblDataHora;
         private System.Windows.Forms.Label lblSituacao;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MaskedTextBox MtxtDataHora;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblFechar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MaskedTextBox MtxtDataHora;
     }
 }

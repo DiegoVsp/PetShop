@@ -59,7 +59,7 @@ namespace PetShop.DAO
             {
                 dr.Read();
                 pet.CodPet = (int)dr["codPet"];
-                pet.Cliente = clienteDAO.BuscarPorId((int)dr["codcliente"]);
+                pet.Cliente = clienteDAO.BuscarPorId((int)dr["codCli"]);
                 pet.Nome = (string)dr["nome"];
                 pet.Raca = (string)dr["raca"];
                 pet.Porte = (string)dr["porte"];
@@ -81,6 +81,43 @@ namespace PetShop.DAO
             return pet;
         }
 
+        //Buscar Por NOme
+        public IList<Pet> BuscarPorNomeP(string nome)
+        {
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "select * from Pet where nome like @nome";
+
+            comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            IList<Pet> pets = new List<Pet>();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Pet pet = new Pet();
+
+                    pet.CodPet = (int)dr["CodPet"];
+                    pet.Nome = (string)dr["Nome"];
+                    pet.Porte = (string)dr["Porte"];
+                    pet.Cor = (string)dr["Cor"];
+                    pet.Raca = (string)dr["Raca"];
+                    pet.Sexo = (string)dr["Sexo"];
+                    pet.Especie = (string)dr["Especie"];
+
+
+                    pets.Add(pet);
+                }
+            }
+            else
+            {
+                pets = null;
+            }
+            return pets;
+        }
         //Update
         public void Update(Pet pet)
         {

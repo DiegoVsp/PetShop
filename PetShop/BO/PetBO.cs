@@ -38,6 +38,21 @@ namespace PetShop.BO
             }
         }
 
+        //Buscar Por NOme
+        public IList<Pet> BuscarNPet(Pet pet)
+        {
+            PetDAO petDAO = new PetDAO();
+            if (pet.Nome != "")
+            {
+                IList<Pet> petTemp = petDAO.BuscarPorNomeP(pet.Nome);
+                return petTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         //UPDATE
         public void Editar(Pet pet)
         {

@@ -26,5 +26,9 @@ namespace PetShop.MODEL
         public string Cidade { get => cidade; set => cidade = value; }
         public string Telefone { get => telefone; set => telefone = value; }
 
+        public override string ToString()
+        {
+            return Codigo.ToString();
+        }
     }
 }

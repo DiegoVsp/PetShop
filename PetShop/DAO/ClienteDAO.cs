@@ -68,6 +68,7 @@ namespace PetShop.DAO
                 throw new Exception("Não foi possivel realizar o update" + ex.Message);
             }
         }
+
         public Cliente BuscarPorId(int id)
         {
             MySqlCommand comando = new MySqlCommand();
@@ -111,6 +112,44 @@ namespace PetShop.DAO
                 cliente.Email = "";
             }
             return cliente;
+        }
+
+        public IList<Cliente> BuscarPorNome(string nome)
+        {
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "select * from cliente where nome like @nome";
+
+            comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            IList<Cliente> clientes = new List<Cliente>();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Cliente cliente = new Cliente();
+
+                    cliente.Codigo = (int)dr["CodCli"];
+                    cliente.Nome = (string)dr["Nome"];
+                    cliente.Cpf = (string)dr["Cpf"];
+                    cliente.Cep = (string)dr["Cep"];
+                    cliente.Endereco = (string)dr["Endereco"];
+                    cliente.Cidade = (string)dr["Cidade"];
+                    cliente.Numero = (string)dr["Numero"];
+                    cliente.Telefone = (string)dr["Telefone"];
+                    cliente.Email = (string)dr["Email"];
+
+                    clientes.Add(cliente);
+                }
+            }
+            else
+            {
+                clientes = null;
+            }
+            return clientes;
         }
     }
 }

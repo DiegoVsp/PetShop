@@ -47,21 +47,22 @@
             this.lblCod = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblFechar = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.grpCliente = new System.Windows.Forms.GroupBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtCep = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBuscarId = new System.Windows.Forms.Button();
             this.grpCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(465, 198);
+            this.btnEditar.Location = new System.Drawing.Point(465, 211);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(101, 37);
+            this.btnEditar.Size = new System.Drawing.Size(101, 24);
             this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -70,20 +71,20 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(241, 198);
+            this.btnBuscar.Location = new System.Drawing.Point(288, 211);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(101, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(101, 24);
             this.btnBuscar.TabIndex = 21;
-            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Text = "BUSCAR NOME";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 198);
+            this.btnCadastrar.Location = new System.Drawing.Point(12, 211);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(101, 37);
+            this.btnCadastrar.Size = new System.Drawing.Size(101, 24);
             this.btnCadastrar.TabIndex = 19;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -232,14 +233,6 @@
             this.lblFechar.Text = "X";
             this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 250);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(554, 116);
-            this.dataGridView1.TabIndex = 33;
-            // 
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(354, 72);
@@ -292,15 +285,35 @@
             this.txtCep.TabIndex = 4;
             this.txtCep.Leave += new System.EventHandler(this.cep_Leave);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 252);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(554, 122);
+            this.dataGridView1.TabIndex = 45;
+            // 
+            // btnBuscarId
+            // 
+            this.btnBuscarId.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarId.Location = new System.Drawing.Point(160, 211);
+            this.btnBuscarId.Name = "btnBuscarId";
+            this.btnBuscarId.Size = new System.Drawing.Size(101, 24);
+            this.btnBuscarId.TabIndex = 46;
+            this.btnBuscarId.Text = "BUSCAR ID";
+            this.btnBuscarId.UseVisualStyleBackColor = true;
+            this.btnBuscarId.Click += new System.EventHandler(this.BtnBuscarId_Click);
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(595, 386);
+            this.Controls.Add(this.btnBuscarId);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grpCliente);
             this.Controls.Add(this.lblFechar);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBuscar);
@@ -309,9 +322,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grpCliente.ResumeLayout(false);
             this.grpCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,10 +350,11 @@
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblFechar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.GroupBox grpCliente;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnBuscarId;
     }
 }

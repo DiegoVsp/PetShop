@@ -48,5 +48,19 @@ namespace PetShop.BO
                 cliente.Email = clienteTemp.Email;
             }
         }
+
+        public IList<Cliente> BuscarN(Cliente cliente)
+        {
+            ClienteDAO clienteDAO = new ClienteDAO();
+            if(cliente.Nome != "")
+            {
+                IList<Cliente> clienteTemp = clienteDAO.BuscarPorNome(cliente.Nome);
+                return clienteTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace PetShop.MODEL
 
         public override string ToString()
         {
-            return this.Tipo;
+            return CodServico.ToString();
         }
     }
 }

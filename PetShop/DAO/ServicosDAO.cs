@@ -85,5 +85,39 @@ namespace PetShop.DAO
             return servico;
 
         }
+
+        public IList<Servico> BuscarPorTipo(string tipo)
+        {
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "select * from Servico where tipo like @tipo";
+
+            comando.Parameters.AddWithValue("@tipo", "%" + tipo + "%");
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            IList<Servico> servicos = new List<Servico>();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Servico servico = new Servico();
+
+                    servico.CodServico = (int)dr["CodServ"];
+                    servico.Tipo = (string)dr["Tipo"];
+                    servico.Porte = (string)dr["Porte"];
+                    servico.Valor = Convert.ToSingle((decimal)dr["Valor"]);
+
+
+                    servicos.Add(servico);
+                }
+            }
+            else
+            {
+                servicos = null;
+            }
+            return servicos;
+        }
     }
 }

@@ -26,21 +26,21 @@ namespace PetShop
             ClienteBO clienteBO = new ClienteBO();
             try
             {
-                cliente.Nome = txtNome.Text;
-                cliente.Cpf = txtCpf.Text;
-                cliente.Cep = txtCep.Text;
-                cliente.Endereco = txtEnd.Text;
-                cliente.Cidade = txtCidade.Text;
-                cliente.Numero = txtNum.Text;
-                cliente.Telefone = txtTelefone.Text;
-                cliente.Email = txtEmail.Text;
+                cliente.Nome = txtNome.Text.ToUpper();
+                cliente.Cpf = txtCpf.Text.ToUpper();
+                cliente.Cep = txtCep.Text.ToUpper();
+                cliente.Endereco = txtEnd.Text.ToUpper();
+                cliente.Cidade = txtCidade.Text.ToUpper();
+                cliente.Numero = txtNum.Text.ToUpper();
+                cliente.Telefone = txtTelefone.Text.ToUpper();
+                cliente.Email = txtEmail.Text.ToUpper();
 
                 clienteBO.GravarCliente(cliente);
                 MessageBox.Show("Cliente Cadastrado com sucesso!!!");
 
                 txtNome.Clear();
                 txtCpf.Clear();
-                txtCpf.Clear();
+                txtCep.Clear();
                 txtEnd.Clear();
                 txtCidade.Clear();
                 txtNum.Clear();
@@ -49,9 +49,9 @@ namespace PetShop
             }
             catch
             {
-                MessageBox.Show("Insira corretamente os dados!!!","ATENÇÃO",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Insira corretamente os dados!!!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
+
 
         }
 
@@ -92,7 +92,7 @@ namespace PetShop
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -127,10 +127,25 @@ namespace PetShop
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
+
             Cliente cliente = new Cliente();
             ClienteBO clienteBO = new ClienteBO();
 
+            try
+            {
+                cliente.Nome = txtNome.Text;
+                dataGridView1.DataSource = clienteBO.BuscarN(cliente);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha os dados Corretamente!!");
+            }
+        }
+
+        private void BtnBuscarId_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            ClienteBO clienteBO = new ClienteBO();
             try
             {
                 cliente.Codigo = Convert.ToInt16(txtCod.Text);

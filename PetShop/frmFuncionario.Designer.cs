@@ -51,10 +51,11 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grpFuncionario = new System.Windows.Forms.GroupBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lblFechar = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.btnBuscarNome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -219,9 +220,9 @@
             // btnCalcularSalário
             // 
             this.btnCalcularSalário.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcularSalário.Location = new System.Drawing.Point(539, 223);
+            this.btnCalcularSalário.Location = new System.Drawing.Point(539, 224);
             this.btnCalcularSalário.Name = "btnCalcularSalário";
-            this.btnCalcularSalário.Size = new System.Drawing.Size(110, 38);
+            this.btnCalcularSalário.Size = new System.Drawing.Size(110, 37);
             this.btnCalcularSalário.TabIndex = 14;
             this.btnCalcularSalário.Text = "CALCULAR SALÁRIO";
             this.btnCalcularSalário.UseVisualStyleBackColor = true;
@@ -245,7 +246,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 23);
             this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Text = "BUSCAR ID";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -287,6 +288,22 @@
             this.grpFuncionario.TabStop = false;
             this.grpFuncionario.Text = "CADASTRO FUNCIONÁRIOS";
             // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(449, 42);
+            this.txtCpf.Mask = "000-000-000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(100, 20);
+            this.txtCpf.TabIndex = 67;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(127, 80);
+            this.txtTelefone.Mask = "(99) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 66;
+            // 
             // lblFechar
             // 
             this.lblFechar.AutoSize = true;
@@ -309,21 +326,16 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_1);
             // 
-            // txtTelefone
+            // btnBuscarNome
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(127, 80);
-            this.txtTelefone.Mask = "(99) 0000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 66;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(449, 42);
-            this.txtCpf.Mask = "000-000-000-00";
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(100, 20);
-            this.txtCpf.TabIndex = 67;
+            this.btnBuscarNome.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarNome.Location = new System.Drawing.Point(387, 209);
+            this.btnBuscarNome.Name = "btnBuscarNome";
+            this.btnBuscarNome.Size = new System.Drawing.Size(112, 23);
+            this.btnBuscarNome.TabIndex = 83;
+            this.btnBuscarNome.Text = "BUSCAR NOME";
+            this.btnBuscarNome.UseVisualStyleBackColor = true;
+            this.btnBuscarNome.Click += new System.EventHandler(this.BtnBuscarNome_Click);
             // 
             // frmFuncionario
             // 
@@ -331,6 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(686, 386);
+            this.Controls.Add(this.btnBuscarNome);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblFechar);
             this.Controls.Add(this.grpFuncionario);
@@ -379,5 +392,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Button btnBuscarNome;
     }
 }

@@ -132,5 +132,20 @@ namespace PetShop
         {
             this.Close();
         }
+
+        private void BtnBuscarNome_Click(object sender, EventArgs e)
+        {
+            Pet pet = new Pet();
+            PetBO petBO = new PetBO();
+            try
+            {
+                pet.Nome = txtNome.Text;
+                dataGridView1.DataSource = petBO.BuscarNPet(pet);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha os dados Corretamente!!");
+            }
+        }
     }
 }
