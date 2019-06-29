@@ -159,7 +159,9 @@ namespace PetShop.DAO
             
             MySqlCommand comando = new MySqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "select f.codfunc,round(f.salario * 0.1 * (select count(*) from atendimento a where a.codfunc = f.codfunc) + f.salario,2) as comissao from funcionario f where f.codfunc = @codfunc";
+            comando.CommandText = "select f.codfunc,round(f.salario * 0.1 * (select count(*) " +
+                "from atendimento a where a.codfunc = f.codfunc) + f.salario,2) as comissao " +
+                "from funcionario f where f.codfunc = @codfunc";
 
             comando.Parameters.AddWithValue("codfunc", funcionario.Codigo );
 

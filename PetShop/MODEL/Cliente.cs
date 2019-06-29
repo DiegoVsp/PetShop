@@ -12,6 +12,6 @@ namespace PetShop.MODEL
 
         public string Email { get => email; set => email = value; }
 
-      
+        
     }
 }

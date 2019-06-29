@@ -23,8 +23,7 @@ namespace PetShop
         {
             Pet pet = new Pet();
             PetBO petBO = new PetBO();
-            try
-            {
+          
                 pet.Cliente.Codigo = Convert.ToInt16(txtCod.Text);
                 pet.Nome = txtNome.Text.ToUpper();
                 pet.Porte = txtPorte.Text.ToUpper();
@@ -43,14 +42,7 @@ namespace PetShop
                 txtRaca.Clear();
                 txtSexo.Clear();
                 txtEspecie.Clear();
-            }
-            catch
-            {
-                // MessageBox.Show("Preencha  corretamente as informações!!", "ATENÇÃO ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                MessageBox.Show("Preencha os dados corretamente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
+           
 
         }
 

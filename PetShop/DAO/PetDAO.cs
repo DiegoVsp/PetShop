@@ -21,7 +21,7 @@ namespace PetShop.DAO
 
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "Insert into Pet(codcliente,nome,especie,raca,porte,sexo,cor) values(@codcliente,@nome,@especie,@raca,@porte,@sexo,@cor)";
+                comando.CommandText = "Insert into Pet(codcli,nome,especie,raca,porte,sexo,cor) values(@codcliente,@nome,@especie,@raca,@porte,@sexo,@cor)";
 
 
                 comando.Parameters.AddWithValue("@codcliente", pet.Cliente.Codigo);
@@ -100,6 +100,7 @@ namespace PetShop.DAO
                 {
                     Pet pet = new Pet();
 
+                    pet.Cliente.Codigo = (int)dr["CodCli"];
                     pet.CodPet = (int)dr["CodPet"];
                     pet.Nome = (string)dr["Nome"];
                     pet.Porte = (string)dr["Porte"];
@@ -141,7 +142,7 @@ namespace PetShop.DAO
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possivel editar o Livro" + ex.Message);
+                throw new Exception("Não foi possivel editar o Pet" + ex.Message);
             }
 
 

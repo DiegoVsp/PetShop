@@ -87,7 +87,9 @@ namespace PetShop.DAO
             MySqlCommand comando = new MySqlCommand();
             comando.CommandType = CommandType.Text;
             comando.CommandText = "Select * from Atendimento Where codFunc=@codF";
-            //"select f.codfunc, f.nome, a.codatend, s.tipo, p.nome, a.datahora, a.situacao from atendimento a inner join funcionario f on a.codfunc=f.codfunc inner join servico s on s.codserv = a.codserv inner join pet p on p.codPet = a.codPet where f.codfunc like @codF";
+            //"select f.codfunc, f.nome, a.codatend, s.tipo, p.nome, a.datahora, a.situacao from atendimento 
+            //a inner join funcionario f on a.codfunc=f.codfunc inner join servico s on s.codserv = a.codserv inner join pet p on 
+            //p.codPet = a.codPet where f.codfunc like @codF";
 
 
             comando.Parameters.AddWithValue("@codF", codF);
