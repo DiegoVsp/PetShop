@@ -46,8 +46,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblFechar = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.MtxtDataHora = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtpDataHora = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -222,7 +222,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.MtxtDataHora);
+            this.groupBox1.Controls.Add(this.dtpDataHora);
             this.groupBox1.Controls.Add(this.txtCodServico);
             this.groupBox1.Controls.Add(this.lblCodAtendimento);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -242,15 +242,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CADASTRO ATENDIMENTO";
             // 
-            // MtxtDataHora
-            // 
-            this.MtxtDataHora.Location = new System.Drawing.Point(169, 110);
-            this.MtxtDataHora.Mask = "00/00/0000 90:00";
-            this.MtxtDataHora.Name = "MtxtDataHora";
-            this.MtxtDataHora.Size = new System.Drawing.Size(100, 20);
-            this.MtxtDataHora.TabIndex = 90;
-            this.MtxtDataHora.ValidatingType = typeof(System.DateTime);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -259,6 +250,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(627, 150);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataGridView1_DataError);
+            // 
+            // dtpDataHora
+            // 
+            this.dtpDataHora.CustomFormat = "dd-MM-yyyy / HH:mm:ss";
+            this.dtpDataHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataHora.Location = new System.Drawing.Point(111, 112);
+            this.dtpDataHora.Name = "dtpDataHora";
+            this.dtpDataHora.Size = new System.Drawing.Size(142, 20);
+            this.dtpDataHora.TabIndex = 90;
             // 
             // frmAtendimento
             // 
@@ -307,6 +307,6 @@
         private System.Windows.Forms.Label lblFechar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MaskedTextBox MtxtDataHora;
+        private System.Windows.Forms.DateTimePicker dtpDataHora;
     }
 }

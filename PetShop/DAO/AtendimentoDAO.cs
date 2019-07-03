@@ -19,14 +19,14 @@ namespace PetShop.DAO
             {
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "Insert into Atendimento(codserv,codpet,codfunc,datahora,situacao) values(@codServ,@codPet,@codFunc,@dataHora,@situacao)";
+                comando.CommandText = "Insert into Atendimento(codserv,codpet,codfunc,datahora,situacao) values(@codServ,@codPet,@codFunc,@dtpDataHora,@situacao)";
 
 
 
                 comando.Parameters.AddWithValue("@codServ", atendimento.Servico.CodServico);
                 comando.Parameters.AddWithValue("@codPet", atendimento.Pet.CodPet);
                 comando.Parameters.AddWithValue("@codFunc", atendimento.Funcionario.Codigo);
-                comando.Parameters.AddWithValue("@dataHora", atendimento.DataHora);
+                comando.Parameters.AddWithValue("@dtpDataHora", atendimento.DataHora);
                 comando.Parameters.AddWithValue("@situacao", atendimento.Situacao);
 
                 ConexaoBanco.CRUD(comando);//Esta sendo  enviado o comando para  o metodo CRUD

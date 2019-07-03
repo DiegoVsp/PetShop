@@ -32,7 +32,7 @@ namespace PetShop
                 atendimento.Servico.CodServico = Convert.ToInt16(txtCodServico.Text);
                 atendimento.Pet.CodPet = Convert.ToInt16(txtCodPet.Text);
                 atendimento.Funcionario.Codigo = Convert.ToInt16(txtCodFunc.Text);
-                atendimento.DataHora = Convert.ToDateTime(MtxtDataHora.Text);
+                atendimento.DataHora = Convert.ToDateTime(dtpDataHora.Value);
                 atendimento.Situacao = comboBox1.Text;
 
                 atendimentoBO.GravarAtendimento(atendimento);
